@@ -1,0 +1,28 @@
+# Ignore
+/public/wp-admin/
+/public/wp-content/plugins
+/public/wp-content/upgrade
+/public/wp-content/uploads
+/public/wp-content/index.php
+/public/wp-config.php
+/public/wp-config-sample.php
+/public/wp-cron.php
+/public/wp-includes/*
+/public/wp-activate.php
+/public/wp-blog-header.php
+/public/wp-comments-post.php
+/public/wp-links-opml.php
+/public/wp-load.php
+/public/wp-login.php
+/public/wp-mail.php
+/public/wp-settings.php
+/public/wp-signup.php
+/public/wp-trackback.php
+/public/xmlrpc.php
+/public/license.txt
+/public/index.php
+/public/.htaccess
+/public/readme.html
+
+# Allow
+!/public/wp-content/themes
