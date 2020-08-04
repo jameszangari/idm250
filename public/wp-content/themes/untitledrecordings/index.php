@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-idm250 yuh
+idm250
 
 <?php get_footer(); ?>

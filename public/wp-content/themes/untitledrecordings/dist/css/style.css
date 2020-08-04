@@ -1,3 +1,150 @@
-* {
-    color: red;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*------------------ END CSS RESET ------------------*/
+
+
+/*------------------ BODY / ROOT STYLES ------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --gray: #c4c4c4;
+  --black: #000000;
+  --darkpurple: #2b1224;
+  --charcoal: #2f394d;
+  --aliceblue: #e6e9ef;
+  --white: #ffffff;
+}
+
+h1 {
+  font-family: "DIN Alternate", sans-serif;
+}
+
+h2 {
+  font-family: "DIN Alternate", sans-serif;
+}
+
+h3 {
+  color: #000000;
+  font-family: "DIN Alternate", sans-serif;
+  font-weight: bold;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+h3:after {
+  display: block;
+  margin: 0.5rem auto;
+  width: 13rem;
+}
+
+h4 {
+  color: var(--dark-gray);
+  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  padding: 0.25rem 0;
+}
+
+/*------------------ NAVIGATION STYLES ------------------*/
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__logo {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  left: 36px;
+  z-index: 99;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: fixed;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+  font-family: "DIN Alternate", sans-serif;
+  font-size: 20px;
+  background: #000;
+  overflow: auto;
+  text-transform: uppercase;
+  z-index: 98;
+}
+.menu-item {
+	display: block;
+	padding: 0 10px;
+}
+.menu-item a {
+  color: var(--white);
+  text-decoration: none;
+}
+.menu-item a:hover {
+  border-bottom: 2px solid var(--aliceblue);
+  transition: all .1s;
+}
+
+.current-menu-item a {
+  color: #5E687E;
+}
+
+/*------------------ FOOTER STYLES ------------------*/
+
+.footer, .menu-footer-navigation-container {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  position: fixed;
+  height: 100px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+#footer-logo {
+  margin-top: 39px;
+  width: 376px;
+  max-width: 100%;
 }
