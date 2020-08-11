@@ -39,12 +39,18 @@ table {
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: var(--aliceblue);
   font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
 }
 
 :root {
+  /* Font Variables */
+  --font-heading: 'DIN Alternate', Helvetica, Arial, sans-serif;
+  --font-body: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+  /* Color Variables */
   --gray: #c4c4c4;
+  --darkgray: #4c4c4c;
   --black: #000000;
   --darkpurple: #2b1224;
   --charcoal: #2f394d;
@@ -52,17 +58,18 @@ body {
   --white: #ffffff;
 }
 
-h1 {
-  font-family: "DIN Alternate", sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
 }
 
 h2 {
-  font-family: "DIN Alternate", sans-serif;
+  font-size: 48px;
 }
 
-h3 {
+/* h3 {
   color: #000000;
-  font-family: "DIN Alternate", sans-serif;
+  font-family: var(--font-heading);
   font-weight: bold;
   padding-top: 1rem;
   margin-bottom: 0;
@@ -81,7 +88,7 @@ h4 {
   font-weight: 400;
   font-size: 17px;
   padding: 0.25rem 0;
-}
+} */
 
 /*------------------ NAVIGATION STYLES ------------------*/
 .header__content {
@@ -148,3 +155,134 @@ h4 {
   width: 376px;
   max-width: 100%;
 }
+
+/*------------------ PAGE STYLES ------------------*/
+.intro-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 8em;
+}
+
+.intro-content-left {
+  height: 400px;
+  margin-top: 150px;
+  margin-right: 3em;
+  text-align: right;
+}
+
+.artist-title {
+  font-size: 96px;
+  padding-bottom: 50px;
+}
+
+.artist-roles-title {
+  font-family: var(--font-body); 
+  color: var(--darkgray);
+  font-size: 48px;
+  font-weight: 600;
+  padding-bottom: 150px;
+}
+
+.artist-social-media {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.artist-socials-instagram, .artist-socials-twitter, 
+.artist-socials-soundcloud, .artist-socials-email {
+  font-size: 70px;
+  color: black;
+  text-decoration: none;
+}
+
+.artist-socials-instagram:hover {
+  color: #E1306C;
+  transition: all .2s;
+}
+
+.artist-socials-twitter:hover {
+  color: #1DA1F2;
+  transition: all .2s;
+}
+
+.artist-socials-soundcloud:hover {
+  color: #FE5000;
+  transition: all .2s;
+}
+
+.artist-socials-email:hover {
+  color: #DB4437;
+  transition: all .2s;
+}
+
+.intro-content-right {
+  height: 400px;
+  max-width: 350px;
+  margin-top: 100px;
+  margin-right: 3em;
+  position: relative;
+}
+
+.artist-profile-image-shadow {
+  width: 100%;
+  height: 350px;
+  display: block;
+  background-color: var(--darkpurple);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  transform:  translate(25%, 25%); 
+}
+
+.artist-profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 10px solid var(--aliceblue);
+}
+
+.page-builder {
+  background-color: var(--charcoal);
+  height: 400px;
+  padding: 3em;
+}
+
+.page-builder p {
+  font-family: var(--font-body);
+  color: var(--white);
+  font-size: 20px;
+  line-height: normal;
+  padding-top: 2em;
+  margin: 0 8em;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media screen and (max-device-width : 1024px) {
+  .intro-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .intro-content-left, .intro-content-right {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
+
+  .intro-content-right {
+    padding-top: 3em;
+    padding-bottom: 6em;
+    right: 50px;
+  }
+
+  .page-builder{
+    padding: 1.5em;
+  }
+  .page-builder p {
+    margin: 0 2em;
+  }
+}
+  
