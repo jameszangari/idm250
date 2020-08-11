@@ -1,3 +1,4 @@
+/*------------------ CSS RESET ------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -35,6 +36,143 @@ table {
 /*------------------ END CSS RESET ------------------*/
 
 
+/*------------------ DIN | FONT FAMILY ------------------*/
+@font-face {
+  font-family: 'DIN_Black';
+  src: url('../fonts/DIN-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Schablonierschrift';
+  src: url('../fonts/DINSchablonierschrift.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN_Black_1';
+  src: url('../fonts/DIN-Black_1.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Alternate Medium';
+  src: url('DINAlternate-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Light Alternate';
+  src: url('DINLightAlternate.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Medium';
+  src: url('../fonts/DIN-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Alternate Black';
+  src: url('../fonts/DINAlternate-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Bold';
+  src: url('../fonts/DINBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Alternate Light';
+  src: url('../fonts/DINAlternate-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN';
+  src: url('../fonts/DIN.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Alternate Regular';
+  src: url('../fonts/DINAlternate-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Bold Alternate';
+  src: url('../fonts/DINBoldAlternate.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Black Alternate';
+  src: url('../fonts/DINBlackAlternate.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Light';
+  src: url('../fonts/DIN-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Regular Alternate';
+  src: url('../fonts/DINRegularAlternate.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Medium Alternate';
+  src: url('../fonts/DINMediumAlternate.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN Alternate Bold';
+  src: url('../fonts/DINAlternate-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*------------------ BODY / ROOT STYLES ------------------*/
 body {
   margin: 0;
@@ -45,7 +183,7 @@ body {
 
 :root {
   /* Font Variables */
-  --font-heading: 'DIN Alternate', Helvetica, Arial, sans-serif;
+  --font-heading: 'DIN Medium Alternate', Helvetica, Arial, sans-serif;
   --font-body: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
   /* Color Variables */
@@ -65,30 +203,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 48px;
+  text-transform: uppercase;
 }
-
-/* h3 {
-  color: #000000;
-  font-family: var(--font-heading);
-  font-weight: bold;
-  padding-top: 1rem;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-h3:after {
-  display: block;
-  margin: 0.5rem auto;
-  width: 13rem;
-}
-
-h4 {
-  color: var(--dark-gray);
-  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  padding: 0.25rem 0;
-} */
 
 /*------------------ NAVIGATION STYLES ------------------*/
 .header__content {
@@ -175,6 +291,7 @@ h4 {
 .artist-title {
   font-size: 96px;
   padding-bottom: 50px;
+  text-transform: uppercase;
 }
 
 .artist-roles-title {
@@ -188,7 +305,6 @@ h4 {
 .artist-social-media {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
 }
 
 .artist-socials-instagram, .artist-socials-twitter, 
