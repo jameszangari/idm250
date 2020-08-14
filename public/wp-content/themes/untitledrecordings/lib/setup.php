@@ -20,10 +20,14 @@ function include_css_files() {
     
     // Example of including an external link
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 }
 
 // When WP performs this action, call our function
 add_action('wp_enqueue_scripts', 'include_css_files');
+
+
 
 /**
  * Include any scripts into the site the proper way
@@ -32,6 +36,8 @@ add_action('wp_enqueue_scripts', 'include_css_files');
  */
 function include_js_files() {
     wp_enqueue_script('untitled-js', get_template_directory_uri() . '/dist/scripts/scripts.js', [], false, true);
+    // Font Awesome icons
+    wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/080c06f1d6.js');
 }
 
 // When WP performs this action, call our function
@@ -51,7 +57,6 @@ function jquery_script() {
     wp_enqueue_script( 'my-great-script', get_template_directory_uri() . '/dist/scripts/scripts.js', array( 'jquery' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'jquery_script' );
-
 
 /**
  * Register the menus on my site

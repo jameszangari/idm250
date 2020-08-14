@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title(); ?></title>
-    <script src="https://kit.fontawesome.com/080c06f1d6.js" crossorigin="anonymous"></script>
-    <script src="/dist/scripts/scripts.js"></script>
+    <title><?php wp_title(''); ?></title>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <header class="header">
   <div class="header__container header__content">
-    <a href="<?php echo home_url(); ?>" class="header__logo_link"><img class="header__logo" src="https://untitledrecordings.net/media/logos/urw.png" alt="Untitled Recordings Logo"></a>
+    <a href="<?php echo get_site_url(); ?>" class="header__logo_link"><img class="header__logo" src="<?php echo get_field('logo-favicon', 'option')["url"]; ?>" alt="<?php echo get_field('logo-full', 'option')["alt"]; ?>"></a>
     
     <button class="header__hamburger"><i class="fas fa-bars"></i></button>
     <div class="menu-wrapper"><?php wp_nav_menu(['theme_location' => 'primary_menu']);?>

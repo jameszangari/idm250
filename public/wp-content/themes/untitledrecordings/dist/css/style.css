@@ -173,6 +173,38 @@ table {
   font-display: swap;
 }
 
+/*------------------ TIDAL ICON ------------------*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.eot?enecue');
+  src:  url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.eot?enecue#iefix') format('embedded-opentype'),
+    url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.ttf?enecue') format('truetype'),
+    url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.woff?enecue') format('woff'),
+    url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.svg?enecue#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tidal:before {
+  content: "\e900";
+}
+
 /*------------------ BODY / ROOT STYLES ------------------*/
 body {
   margin: 0;
@@ -210,21 +242,73 @@ h2 {
   font-size: 48px;
   text-transform: uppercase;
 }
+/*------------------ 404 STYLES ------------------*/
+.page-not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: var(--black);
+  overflow-y: hidden;
+}
 
+.page-not-found-container h1 {
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 288px;
+  color: var(--white);
+}
+
+.page-not-found-container p {
+  font-family: var(--font-body);
+  font-size: 32px;
+  color: var(--aliceblue);
+  padding-bottom: 100px;
+}
+
+.page-not-found-button {
+  color: var(--white);
+  border: 3px solid var(--aliceblue);
+  border-radius: 50px;
+  width: 200px;
+  height: 42px;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  text-decoration: none !important;
+  padding-top: 10px;
+}
+
+.page-not-found-button:hover {
+  border: 3px solid var(--charcoal);
+  color: var(--charcoal);
+  transition: all .2s ease-in-out;
+}
 /*------------------ NAVIGATION STYLES ------------------*/
+.admin-bar .header__content{
+  top: 32px;
+}
+
 .header__content {
   display: flex;
   justify-content: center;
   text-align: center;
   background-color: var(--black);
   height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .header__logo {
-  height: 50px;
+  height: auto;
   width: 50px;
   position: fixed;
   left: 36px;
+  margin-top: 0.6em;
   z-index: 99;
 }
 
@@ -294,6 +378,8 @@ h2 {
   overflow: auto;
   text-transform: uppercase;
   z-index: 98;
+  overflow-y: hidden;
+
 }
 .menu-item {
 	display: block;
@@ -319,7 +405,7 @@ h2 {
   justify-items: stretch;
   background-color: #000;
   position: fixed;
-  height: 100px;
+  height: 60px;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -330,10 +416,9 @@ h2 {
   font-size: 26px;
 }
 
-.footer img{
-  width: 500px;
-  margin: auto 0;
-  padding-top: 38px;
+.footer a{
+  width: auto;
+  margin: auto;
 }
 
 #footer-logo {
@@ -410,6 +495,7 @@ h2 {
   margin-top: 100px;
   margin-right: 3em;
   position: relative;
+  z-index: -1;
 }
 
 .artist-profile-image-shadow {
@@ -420,7 +506,7 @@ h2 {
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  transform:  translate(25%, 25%); 
+  transform:  translate(20%, 20%); 
 }
 
 .artist-profile-image {
@@ -446,12 +532,14 @@ h2 {
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media screen and (min-device-width : 1024px) {
-
+@media screen and (min-width : 1024px) {
+  .footer img {
+    width: 500px;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media screen and (max-device-width : 1024px) {
+@media screen and (max-width : 1024px) {
   .menu {
     display: flex;
     justify-content: flex-end;
@@ -476,11 +564,213 @@ h2 {
     right: 50px;
   }
 
+  .artist-roles-title {
+    padding-bottom: 2em;
+  }
+
   .page-builder{
     padding: 1.5em;
+    padding-top: 3em;
   }
   .page-builder p {
     margin: 0 2em;
   }
+
+  .footer img {
+    width: 350px;
+  }
 }
   
+@media screen and (max-width: 782px) {
+  .admin-bar .header__content{
+    top: 46px;
+  }
+}
+
+/*------------------ MUSIC POST STYLES ------------------*/
+.music-posts-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-posts-content {
+  padding: 3em;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+.music-posts-content-right {
+  margin-left: 4em;
+  width: 650px;
+}
+
+.music-posts-title {
+  font-size: 42px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.music-posts-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.music-posts-tags-left {
+  font-weight: bold;
+}
+
+.music-posts-tags-right {
+  text-decoration: underline;
+}
+
+.music-posts-content-left {
+  height: 400px;
+  max-width: 350px;
+  position: relative;
+  z-index: -1;
+}
+
+.music-posts-cover-image {
+  width: 350px;
+  height: 350px;
+}
+
+.music-posts-cover-shadow {
+  width: 100%;
+  height: 350px;
+  display: block;
+  background-color: rgba(244, 171, 152, 1);
+  position: absolute;
+  z-index: -1;
+  transform:  translate(10%, 10%); 
+}
+
+.music-posts-bottom-group {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 6em;
+}
+
+.music-posts-artists-group {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.music-posts-artists {
+  text-align: center;
+  padding: 0 1.5em;
+  width: 150px;
+}
+
+.music-posts-artists img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.music-posts-artist-name {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.music-posts-stream {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.music-posts-stream h3 {
+  grid-column: auto / span 2;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+}
+
+.music-posts-stream a {
+  margin: auto;
+  padding: .25rem 0;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 5px;
+}
+
+.music-posts-instagram, .music-posts-twitter {
+  font-size: 50px;
+  color: var(--black);
+  text-decoration: none; 
+  padding: 0 0.5rem;
+}
+
+.music-posts-spotify, .music-posts-apple, .music-posts-amazon, 
+.music-posts-google-play, .music-posts-soundcloud, .music-posts-tidal {
+  font-size: 50px;
+  color: var(--black);
+  text-decoration: none;
+  width: 210px;
+}
+
+.music-posts-instagram:hover {
+  color: #E1306C;
+  transition: all .2s;
+}
+
+.music-posts-twitter:hover {
+  color: #1DA1F2;
+  transition: all .2s;
+}
+
+.music-posts-spotify:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: #1DB954;
+  transition: all .2s ease-in-out;
+}
+
+.music-posts-apple:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: #A3AAAE;
+  transition: all .2s ease-in-out;
+}
+
+.music-posts-amazon:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: #FF9900;
+  transition: all .2s ease-in-out;
+}
+
+.music-posts-google-play:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: #4285F4;
+  transition: all .2s ease-in-out;
+}
+
+.music-posts-soundcloud:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: #FE5000;
+  transition: all .2s ease-in-out;
+}
+
+.music-posts-tidal img {
+  width: 44px;
+  height: 44px;
+}
+.music-posts-tidal:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background: #00ffff;
+  transition: all .2s ease-in-out;
+}
