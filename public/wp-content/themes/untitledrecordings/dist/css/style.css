@@ -173,38 +173,6 @@ table {
   font-display: swap;
 }
 
-/*------------------ TIDAL ICON ------------------*/
-@font-face {
-  font-family: 'icomoon';
-  src:  url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.eot?enecue');
-  src:  url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.eot?enecue#iefix') format('embedded-opentype'),
-    url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.ttf?enecue') format('truetype'),
-    url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.woff?enecue') format('woff'),
-    url('https://i.icomoon.io/public/temp/8c4db1c02c/UntitledProject/icomoon.svg?enecue#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-tidal:before {
-  content: "\e900";
-}
-
 /*------------------ BODY / ROOT STYLES ------------------*/
 body {
   margin: 0;
@@ -370,7 +338,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  line-height: 1.5em;
+  line-height: 1.75em;
   padding: 0.5em 0;
   font-family: "DIN Alternate", sans-serif;
   font-size: 48px;
@@ -402,29 +370,51 @@ h2 {
 .footer {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
   justify-items: stretch;
   background-color: #000;
-  position: fixed;
-  height: 60px;
+  position: relative;
+  height: auto;
   text-align: center;
   bottom: 0;
   width: 100%;
   z-index: 99;
 }
 
+.footer-menu-icons {
+  padding-top: 1rem;
+}
+
+.footer-menu-icons i {
+  color: var(--white);
+  font-size: 30px;
+  padding: 0.5rem;
+}
+
 .footer .menu-item {
   font-size: 26px;
 }
 
-.footer a{
-  width: auto;
-  margin: auto;
+.footer-logo {
+  padding-bottom: 0.5rem;
 }
 
-#footer-logo {
-  margin-top: 39px;
-  width: 376px;
-  max-width: 100%;
+.footer img {
+  width: 350px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #9a9aff;
+}
+.footer-link:hover {
+  color: #2E9AF3;
+}
+
+.footer p {
+  font-family: var(--font-body);
+  color: var(--white);
+  padding-bottom: 1.75rem;
 }
 
 /*------------------ PAGE STYLES ------------------*/
@@ -533,9 +523,7 @@ h2 {
 
 /* iPads (portrait and landscape) ----------- */
 @media screen and (min-width : 1024px) {
-  .footer img {
-    width: 500px;
-  }
+  /* STYLES */
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -575,10 +563,6 @@ h2 {
   .page-builder p {
     margin: 0 2em;
   }
-
-  .footer img {
-    width: 350px;
-  }
 }
   
 @media screen and (max-width: 782px) {
@@ -603,7 +587,7 @@ h2 {
 
 .music-posts-content-right {
   margin-left: 4em;
-  width: 650px;
+  /* width: 650px; */
 }
 
 .music-posts-title {
@@ -662,6 +646,11 @@ h2 {
   padding-bottom: 1rem;
 }
 
+.music-posts-tracklist-group {
+  /* width: 650px; */
+  justify-self: center;
+}
+
 .music-posts-tracklist {
   display: grid;
   grid-template-columns: 50px 4fr auto;
@@ -671,29 +660,34 @@ h2 {
   font-weight: normal;
   font-size: 30px;
   line-height: 50px;
-  text-align: ;
 }
 
 .music-posts-tracklist p {
-  border-bottom: 2px solid black;
+  border-bottom: 1.5px solid #C4C4C4;
   width: 100%;
 }
 
-.music-posts-tracklist-last-column {
+.music-posts-tracklist-numbers {
+  font-family: var(--font-heading);
+  color: var(--darkgray);
+}
+
+.music-posts-tracklist-time {
   font-size: 18px;
 }
 
 .music-posts-bottom-group {
-  /* display: flex;
-  justify-content: space-evenly; */
   display: grid;
   grid-template-columns: 50% 50%;
-  padding-bottom: 6em;
+  margin-bottom: 6em;
+  justify-items: stretch;
+  padding: 3em;
 }
 
 .music-posts-artists-group {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
+  justify-self: center;
 }
 
 .music-posts-artists {
@@ -721,6 +715,7 @@ h2 {
   grid-template-columns: repeat(2, 2fr);
   column-gap: 10px;
   row-gap: 15px;
+  justify-self: center;
 }
 
 .music-posts-stream h3 {
@@ -729,6 +724,7 @@ h2 {
   font-style: normal;
   font-weight: bold;
   font-size: 44px;
+  padding-bottom: 1rem;
 }
 
 .music-posts-stream a {
@@ -752,7 +748,7 @@ h2 {
   font-size: 50px;
   color: var(--black);
   text-decoration: none;
-  width: 210px;
+  width: 250px;
 }
 
 .music-posts-instagram:hover {
@@ -803,4 +799,102 @@ h2 {
   color: rgba(255, 255, 255, 0.75);
   background: #00ffff;
   transition: all .2s ease-in-out;
+}
+.music-posts-tidal svg:hover {
+  fill: rgba(255, 255, 255, 0.75);
+}
+.music-posts-tidal svg {
+  width: 100%;
+}
+
+@media only screen  and (min-width : 1224px) {
+  .music-posts-content-right {
+    width: 650px;
+  }
+
+  .music-posts-tracklist-group {
+    width: 650px;
+  }
+}
+
+@media only screen  and (max-width : 600px) {
+  .music-posts-content-left {
+    margin-bottom: -8em !important;
+  } 
+  .music-posts-cover-shadow {
+    width: 100%;
+    height: 200px;
+  }
+  .music-posts-cover-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .music-posts-artists-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .music-posts-artists {
+    padding-bottom: 3em;
+  }
+
+  .music-posts-stream {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .music-posts-spotify, .music-posts-apple, .music-posts-amazon, 
+  .music-posts-google-play, .music-posts-soundcloud, .music-posts-tidal {
+    width: 70vw;
+  }
+
+  .footer img {
+    width: 300px;
+  }
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (max-width : 1224px) {
+  .music-posts-content {
+    padding-top: 5em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .music-posts-title {
+    justify-content: center;
+  }
+  .music-posts-tags p {
+    font-size: 22px;
+  }
+  .music-posts-tags-left {
+    padding-right: 2em;
+  }
+
+  .music-posts-content-left {
+    margin: auto;
+    padding-bottom: 1rem;
+  }
+  .music-posts-content-right {
+    margin: auto 0;
+    padding-bottom: 1rem;
+  }
+
+  .music-posts-tags {
+    width: 100%;
+  }
+
+  .music-posts-bottom-group {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 6em;
+  }
+
+  .music-posts-tracklist-title {
+    text-align: center;
+  }
+  .music-posts-tracklist p {
+    font-size: 22px;
+  }
 }
