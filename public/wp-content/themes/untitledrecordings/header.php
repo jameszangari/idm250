@@ -13,9 +13,11 @@
     
     <button class="header__hamburger"><i class="fas fa-bars"></i></button>
     <div class="menu-wrapper"><?php wp_nav_menu(['theme_location' => 'primary_menu']);?>
-      <div class="menu-wrapper-icons"><a href="https://instagram.com/untitledrecordings"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/untrecordings"><i class="fab fa-twitter"></i></a>
-      <a href="https://discord.gg/G5V8QG9"><i class="fab fa-discord"></i></a></div>
+      <div class="menu-wrapper-icons">
+        <a href="https://instagram.com/untitledrecordings"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/untrecordings"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.gg/G5V8QG9"><i class="fab fa-discord"></i></a>
+      </div>
     </div>
   </div>
 </header></a>

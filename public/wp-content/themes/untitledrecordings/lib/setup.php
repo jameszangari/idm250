@@ -67,8 +67,6 @@ add_action( 'wp_enqueue_scripts', 'jquery_script' );
 function register_theme_navigation() {
     register_nav_menus([
         'primary_menu' => 'Primary Menu',
-        'footer_menu'  => 'Footer Menu',
-        'social_menu'  => 'Social Menu',
     ]);
 }
 
