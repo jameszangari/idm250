@@ -83,9 +83,9 @@
         ?>  
         <?php if($title) : ?>
         <div class="music-posts-tracklist">
-            <p><?php echo $counter; ?></p>
+            <p class="music-posts-tracklist-numbers"><?php echo $counter; ?></p>
             <p><?php echo $title ?></p>
-            <p><?php echo $time ?></p>
+            <p class="music-posts-tracklist-time"><?php echo $time ?></p>
         </div>
         <?php endif; ?> 
         <?php $counter++; ?>  
@@ -113,7 +113,7 @@
             <a href="<?php echo $amazon["url"] ?>" target="<?php echo $amazon["target"] ?>" class="music-posts-amazon"><i class="fab fa-amazon"></i></a>
             <a href="<?php echo $google_play["url"] ?>" target="<?php echo $google_play["target"] ?>" class="music-posts-google-play"><i class="fab fa-google-play"></i></a>
             <a href="<?php echo $soundcloud["url"] ?>" target="<?php echo $soundcloud["target"] ?>" class="music-posts-soundcloud"><i class="fab fa-soundcloud"></i></a>
-            <a href="<?php echo $tidal["url"] ?>" target="<?php echo $tidal["target"] ?>" class="music-posts-tidal"><span class="icon-tidal"></span></a>
+            <a href="<?php echo $tidal["url"] ?>" target="<?php echo $tidal["target"] ?>" class="music-posts-tidal"><svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" width="44px" height="44px"><path d="M 4 5 L 0 9 L 4 13 L 8 9 L 4 5 z M 8 9 L 12 13 L 16 9 L 12 5 L 8 9 z M 16 9 L 20 13 L 24 9 L 20 5 L 16 9 z M 12 13 L 8 17 L 12 21 L 16 17 L 12 13 z"/></svg></a>
         <?php endwhile; ?>
         </div>
         <?php endif; ?>
