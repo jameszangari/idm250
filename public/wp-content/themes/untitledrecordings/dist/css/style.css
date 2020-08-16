@@ -416,7 +416,112 @@ h2 {
   color: var(--white);
   padding-bottom: 1.75rem;
 }
+/*------------------ FRONT PAGE STYLES ------------------*/
+.front-page-landing {
+  height: 50vh;
+  margin-top: 50px;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.front-page-landing-logo {
+  width: 900px;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.front-page-landing-arrow {
+  max-width: 48px;
+  padding-bottom: 1rem;
+}
+
+.front-page-artists {
+  display: grid;
+  grid-gap: 4rem;
+  padding: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  transition: all .5s;
+}
+
+.front-page-artist {
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+  transition: all .5s;
+}
+
+.front-page-artist img {
+  width: 150px;
+  margin: auto;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.front-page-artist-line {
+  border: 2px solid #C4C4C4;
+}
+
+.front-page-artist h3 {
+  color: #000000;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 36px;
+  padding-top: 1rem;
+}
+
+.front-page-artist h4 {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--darkgray);
+  padding: .25rem 0;
+}
+.front-page-artist-socials{
+  display: grid;
+  grid-template-columns: 60px 60px;
+  justify-content: center;
+}
+.front-page-artist-socials i {
+  font-size: 32px;
+}
+/* iPads (portrait and landscape) ----------- */
+@media screen and (min-width : 768px) {
+  .front-page-landing-logo-favicon {
+    display: none;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media screen and (max-width : 1024px) {
+  .front-page-landing-logo {
+    width: 680px;
+  }
+}  
+/* iPads (portrait and landscape) ----------- */
+@media screen and (max-width : 768px) {
+  .front-page-artists{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .front-page-landing-logo {
+    display: none;
+  }
+  .front-page-landing-logo-favicon {
+    margin: auto;
+    max-width: 60%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .front-page-artists{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /*------------------ PAGE STYLES ------------------*/
 .intro-content {
   display: flex;
@@ -455,6 +560,7 @@ h2 {
 .artist-socials-instagram, .artist-socials-twitter, 
 .artist-socials-soundcloud, .artist-socials-email {
   font-size: 70px;
+  height: 50px;
   color: black;
   text-decoration: none;
 }
@@ -587,7 +693,6 @@ h2 {
 
 .music-posts-content-right {
   margin-left: 4em;
-  /* width: 650px; */
 }
 
 .music-posts-title {
@@ -627,6 +732,7 @@ h2 {
 .music-posts-cover-image {
   width: 350px;
   height: 350px;
+  transition: all .3s ease;
 }
 
 .music-posts-cover-shadow {
@@ -807,7 +913,7 @@ h2 {
   width: 100%;
 }
 
-@media only screen  and (min-width : 1224px) {
+@media screen and (min-width: 1224px) {
   .music-posts-content-right {
     width: 650px;
   }
@@ -817,7 +923,7 @@ h2 {
   }
 }
 
-@media only screen  and (max-width : 600px) {
+@media screen and (max-width: 600px) {
   .music-posts-content-left {
     margin-bottom: -8em !important;
   } 
@@ -828,6 +934,9 @@ h2 {
   .music-posts-cover-image {
     width: 200px;
     height: 200px;
+  }
+  .music-posts-title {
+    font-size: 32px;
   }
 
   .music-posts-artists-group {
@@ -853,7 +962,7 @@ h2 {
   }
 }
 /* Desktops and laptops ----------- */
-@media only screen  and (max-width : 1224px) {
+@media screen and (max-width: 1224px) {
   .music-posts-content {
     padding-top: 5em;
     display: flex;
