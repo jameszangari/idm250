@@ -12,15 +12,17 @@
 
             // Get sub field values.
             $producers = get_sub_field('producers');
+            $engineers = get_sub_field('engineers');
             $genre = get_sub_field('genre');
             $style = get_sub_field('style');
             $year = get_sub_field('year');
             $type = get_sub_field('type');
-            //var_dump($producers);
+            //var_dump($engineers);
         ?>
         <div class="music-posts-tags">
             <div class="music-posts-tags-left">
                 <p>Producer(s)</p>
+                <p>Engineer(s)</p>
                 <p>Genre</p>
                 <p>Style</p>
                 <p>Year</p>
@@ -28,6 +30,7 @@
             </div>
             <div class="music-posts-tags-right">
                 <p><?php echo $producers ?></p>
+                <p><?php echo $engineers ?></p>
                 <p><?php echo $genre ?></p>
                 <p><?php echo $style ?></p>
                 <p><?php echo $year ?></p>
