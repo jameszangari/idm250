@@ -275,17 +275,16 @@ h2 {
   height: auto;
   width: 50px;
   position: fixed;
-  left: 36px;
+  left: 26px;
   margin-top: 0.6em;
   z-index: 99;
 }
 
 .header__hamburger {
   position: fixed;
-  font-size: 32px;
-  right: 36px;
+  margin-top: 4px;
+  right: 6px;
   z-index: 99;
-  color: var(--white);
   background: none;
   border: none;
   padding-top: 7.5px;
@@ -294,6 +293,11 @@ h2 {
 
 .header__hamburger i:hover {
   color: var(--charcoal);
+}
+
+.header__hamburger:hover svg path {
+  fill: var(--charcoal);
+  transition: all .1s;
 }
 
 .header__logo_link {
@@ -418,7 +422,7 @@ h2 {
 }
 /*------------------ FRONT PAGE STYLES ------------------*/
 .front-page-landing {
-  height: 50vh;
+  /* height: 50vh; */
   margin-top: 50px;
   background: var(--black);
   display: flex;
@@ -432,6 +436,7 @@ h2 {
   margin: auto;
   max-width: 100%;
   height: auto;
+  padding: 10em 0;
 }
 
 .front-page-landing-arrow {
@@ -459,6 +464,11 @@ h2 {
   margin: auto;
   border-radius: 100%;
   text-align: center;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+}
+.front-page-artist img:hover {
+  transform: scale(1.05);
 }
 
 .front-page-artist-line {
@@ -484,6 +494,7 @@ h2 {
   display: grid;
   grid-template-columns: 60px 60px;
   justify-content: center;
+  padding-top: 1rem;
 }
 .front-page-artist-socials i {
   font-size: 32px;
@@ -513,6 +524,7 @@ h2 {
     margin: auto;
     max-width: 60%;
     height: auto;
+    padding: 8em 0;
   }
 }
 
@@ -523,7 +535,7 @@ h2 {
   }
 }
 /*------------------ PAGE STYLES ------------------*/
-.intro-content {
+.artist-intro-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -531,7 +543,7 @@ h2 {
   margin-bottom: 8em;
 }
 
-.intro-content-left {
+.artist-intro-content-left {
   height: 400px;
   margin-top: 150px;
   margin-right: 3em;
@@ -557,11 +569,15 @@ h2 {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.artist-social-media i {
+  font-size: 70px;
+}
+
 .artist-socials-instagram, .artist-socials-twitter, 
 .artist-socials-soundcloud, .artist-socials-email {
-  font-size: 70px;
-  height: 50px;
-  color: black;
+  font-size: 46px;
+  height: 56px;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -585,7 +601,7 @@ h2 {
   transition: all .2s;
 }
 
-.intro-content-right {
+.artist-intro-content-right {
   height: 400px;
   max-width: 350px;
   margin-top: 100px;
@@ -628,8 +644,36 @@ h2 {
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media screen and (min-width : 1024px) {
-  /* STYLES */
+@media screen and (max-width : 600px) {
+  .artist-profile-image-shadow {
+    width: 100%;
+    height: 250px;
+  }
+  .artist-profile-image {
+    width: 250px;
+    height: 250px;
+  }
+  .artist-intro-content-right {
+    padding-top: 3em;
+    padding-bottom: 0 !important;
+    right: 30px !important;
+    margin-bottom: -30px !important;
+  }
+  .artist-social-media i {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  .artist-title {
+    font-size: 64px;
+  }
+  .artist-roles-title {
+    font-size: 36px;
+  }
+  .artist-intro-content {
+    margin-bottom: 0;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -641,18 +685,18 @@ h2 {
     width: 100%;
   }
   
-  .intro-content {
+  .artist-intro-content {
     display: flex;
     flex-direction: column-reverse;
   }
 
-  .intro-content-left, .intro-content-right {
+  .artist-intro-content-left, .artist-intro-content-right {
     justify-content: center;
     text-align: center;
     margin: auto;
   }
 
-  .intro-content-right {
+  .artist-intro-content-right {
     padding-top: 3em;
     padding-bottom: 6em;
     right: 50px;
@@ -958,7 +1002,7 @@ h2 {
   }
 
   .footer img {
-    width: 300px;
+    width: 250px;
   }
 }
 /* Desktops and laptops ----------- */

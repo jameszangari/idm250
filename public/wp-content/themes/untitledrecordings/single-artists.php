@@ -1,7 +1,7 @@
 <?php get_header();?>
 <main class="main-content">
-  <div class="intro-content">
-    <div class="intro-content-left">
+  <div class="artist-intro-content">
+    <div class="artist-intro-content-left">
     <?php while (have_posts()) : the_post(); ?>
     <h1 class="artist-title"><?php the_title(); ?></h1>
 
@@ -34,7 +34,7 @@
   <?php endif; ?>
   </div>
 
-  <div class="intro-content-right">
+  <div class="artist-intro-content-right">
         <div class="artist-profile-image-shadow"></div>
         <?php the_post_thumbnail( 'large', array( 'class' => 'artist-profile-image' ) );?>
   </div>
