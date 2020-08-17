@@ -19,9 +19,9 @@ function include_css_files() {
     wp_enqueue_style('untitled-css', get_template_directory_uri() . '/dist/css/style.css');
     
     // Example of including an external link
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+    wp_enqueue_style('source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    wp_enqueue_style('bebas-neue', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 }
 
 // When WP performs this action, call our function
