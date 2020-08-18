@@ -472,7 +472,7 @@ h2 {
 }
 
 .front-page-artist-line {
-  border: 2px solid #C4C4C4;
+  border: 2px solid var(--gray);
 }
 
 .front-page-artist h3 {
@@ -813,7 +813,7 @@ h2 {
 }
 
 .music-posts-tracklist p {
-  border-bottom: 1.5px solid #C4C4C4;
+  border-bottom: 1.5px solid var(--gray);
   width: 100%;
 }
 
