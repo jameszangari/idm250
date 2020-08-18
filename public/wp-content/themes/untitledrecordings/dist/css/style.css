@@ -282,7 +282,7 @@ h2 {
 
 .header__hamburger {
   position: fixed;
-  margin-top: 4px;
+  margin-top: 5px;
   right: 6px;
   z-index: 99;
   background: none;
