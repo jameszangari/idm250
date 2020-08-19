@@ -771,22 +771,24 @@ h2 {
   max-width: 350px;
   position: relative;
   z-index: -1;
+  padding-top: 3em;
 }
 
 .music-posts-cover-image {
   width: 350px;
   height: 350px;
   transition: all .3s ease;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  transform: translate(-60%, -10%);
 }
 
 .music-posts-cover-shadow {
-  width: 100%;
+  width: 350px;
   height: 350px;
-  display: block;
-  background-color: rgba(244, 171, 152, 1);
-  position: absolute;
-  z-index: -1;
-  transform:  translate(10%, 10%); 
+  line-height: 350px;
+  text-align: center;
 }
 
 .music-posts-tracklist-title {
@@ -797,7 +799,6 @@ h2 {
 }
 
 .music-posts-tracklist-group {
-  /* width: 650px; */
   justify-self: center;
 }
 
@@ -969,10 +970,10 @@ h2 {
 
 @media screen and (max-width: 600px) {
   .music-posts-content-left {
-    margin-bottom: -8em !important;
-  } 
+    margin-bottom: -10em !important;
+  }
   .music-posts-cover-shadow {
-    width: 100%;
+    width: 200px;
     height: 200px;
   }
   .music-posts-cover-image {

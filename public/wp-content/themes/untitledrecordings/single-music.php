@@ -42,8 +42,9 @@
         <?php endif; ?>
 
         <div class="music-posts-content-left">
-            <div class="music-posts-cover-shadow"></div>
+            <div class="music-posts-cover-shadow js-fillcolor">
             <?php the_post_thumbnail( 'large', array( 'class' => 'music-posts-cover-image' ) );?>
+            </div>
         </div>
 
     </div>

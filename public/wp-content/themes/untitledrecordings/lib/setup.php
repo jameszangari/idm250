@@ -35,28 +35,16 @@ add_action('wp_enqueue_scripts', 'include_css_files');
  * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
  */
 function include_js_files() {
-    wp_enqueue_script('untitled-js', get_template_directory_uri() . '/dist/scripts/scripts.js', [], false, true);
+    wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', [], null, true);
     // Font Awesome icons
     wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/080c06f1d6.js');
+    wp_enqueue_script('background-color', get_template_directory_uri() . '/dist/scripts/jquery.fillcolor.js', ['jquery'], null, true); 
+    wp_enqueue_script('untitled-js', get_template_directory_uri() . '/dist/scripts/scripts.js', ['jquery', 'background-color'], null, true);
 }
 
 // When WP performs this action, call our function
 add_action('wp_enqueue_scripts', 'include_js_files');
-
-// include custom jQuery
-function include_custom_jquery() {
-
-	wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), null, true);
-
-}
-
-add_action('wp_enqueue_scripts', 'include_custom_jquery');
-
-function jquery_script() {
-    wp_enqueue_script( 'my-great-script', get_template_directory_uri() . '/dist/scripts/scripts.js', array( 'jquery' ), '1.0.0', true );
-}
-add_action( 'wp_enqueue_scripts', 'jquery_script' );
 
 /**
  * Register the menus on my site
