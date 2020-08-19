@@ -42,7 +42,7 @@
               <a href="<?php echo $instagram["url"] ?>" target="<?php echo $instagram["target"] ?>" class="artist-socials-instagram"><i class="fab fa-instagram"></i></a>
               <a href="<?php echo $twitter["url"] ?>" target="<?php echo $twitter["target"] ?>" class="artist-socials-twitter"><i class="fab fa-twitter"></i></a>
               <a href="<?php echo $soundcloud["url"] ?>" target="<?php echo $soundcloud["target"] ?>" class="artist-socials-soundcloud"><i class="fab fa-soundcloud"></i></a>
-              <a href="mailto:<?php echo $email ?>" target="_blank noopener noreferrer" class="artist-socials-email"><i class="fas fa-envelope"></i></a>
+              <a href="<?php echo $email['url'] ?>" target="<?php echo $email["target"] ?>" class="artist-socials-email"><i class="fas fa-envelope"></i></a>
             </div>
           </div>
           <?php endif; ?>
