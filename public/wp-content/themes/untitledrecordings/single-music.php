@@ -19,23 +19,43 @@
             $type = get_sub_field('type');
             //var_dump($engineers);
         ?>
-        <div class="music-posts-tags">
-            <div class="music-posts-tags-left">
-                <p>Producer(s)</p>
-                <p>Engineer(s)</p>
-                <p>Genre</p>
-                <p>Style</p>
-                <p>Year</p>
-                <p>Type</p>
+        <div class="music-posts-tags-group">
+            <?php if ($producers) : ?>
+            <div class="music-posts-tags-row">
+                <p class="column-1">Producer(s)</p>
+                <p class="column-2"><?php echo $producers ?></p>
             </div>
-            <div class="music-posts-tags-right">
-                <p><?php echo $producers ?></p>
-                <p><?php echo $engineers ?></p>
-                <p><?php echo $genre ?></p>
-                <p><?php echo $style ?></p>
-                <p><?php echo $year ?></p>
-                <p><?php echo $type ?></p>
+            <?php endif; ?>
+            <?php if ($engineers) : ?>
+            <div class="music-posts-tags-row">
+                <p class="column-1">Engineer(s)</p>
+                <p class="column-2"><?php echo $engineers ?></p>
             </div>
+            <?php endif; ?>
+            <?php if ($genre) : ?>
+            <div class="music-posts-tags-row">
+                <p class="column-1">Genre</p>
+                <p class="column-2"><?php echo $genre ?></p>
+            </div>
+            <?php endif; ?>
+            <?php if ($style) : ?>
+            <div class="music-posts-tags-row">
+                <p class="column-1">Style</p>
+                <p class="column-2"><?php echo $style ?></p>
+            </div>
+            <?php endif; ?>
+            <?php if ($year) : ?>
+            <div class="music-posts-tags-row">
+                <p class="column-1">Year</p>
+                <p class="column-2"><?php echo $year ?></p>
+            </div>
+            <?php endif; ?>
+            <?php if ($type) : ?>
+            <div class="music-posts-tags-row">
+                <p class="column-1">Type</p>
+                <p class="column-2"><?php echo $type ?></p>
+            </div>
+            <?php endif; ?>
         </div>
         </div>
         <?php endwhile; ?>

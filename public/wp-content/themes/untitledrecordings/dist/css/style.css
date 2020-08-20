@@ -747,9 +747,9 @@ h2 {
   justify-content: flex-start;
 }
 
-.music-posts-tags {
+.music-posts-tags-group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   font-family: var(--font-body);
   font-style: normal;
@@ -758,11 +758,17 @@ h2 {
   line-height: 50px;
 }
 
-.music-posts-tags-left {
+.music-posts-tags-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: inherit;
+}
+
+.music-posts-tags-row .column-1 {
   font-weight: bold;
 }
 
-.music-posts-tags-right {
+.music-posts-tags-row .column-2 {
   text-decoration: underline;
 }
 
@@ -772,6 +778,7 @@ h2 {
   position: relative;
   z-index: -1;
   padding-top: 3em;
+  padding-left: 1.5em;
 }
 
 .music-posts-cover-image {
@@ -830,7 +837,7 @@ h2 {
 .music-posts-bottom-group {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-bottom: 6em;
+  margin-bottom: 2em;
   justify-items: stretch;
   padding: 3em;
 }
@@ -972,6 +979,7 @@ h2 {
   .music-posts-content-left {
     margin-bottom: -10em !important;
   }
+
   .music-posts-cover-shadow {
     width: 200px;
     height: 200px;
@@ -982,6 +990,10 @@ h2 {
   }
   .music-posts-title {
     font-size: 32px;
+  }
+
+  .music-posts-tags-row {
+    font-size: 22px;
   }
 
   .music-posts-artists-group {
@@ -995,6 +1007,10 @@ h2 {
   .music-posts-stream {
     display: flex;
     flex-direction: column;
+  }
+
+  .music-posts-stream a {
+    margin: 0.25em !important;
   }
 
   .music-posts-spotify, .music-posts-apple, .music-posts-amazon, 
@@ -1019,11 +1035,19 @@ h2 {
   .music-posts-title {
     justify-content: center;
   }
-  .music-posts-tags p {
-    font-size: 22px;
+
+  .music-posts-tags-row {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2rem;
   }
-  .music-posts-tags-left {
-    padding-right: 2em;
+
+  .music-posts-tags-row .column-1 {
+    width: 50%;
+  }
+  .music-posts-tags-row .column-2 {
+    width: 50%;
+    text-align: right;
   }
 
   .music-posts-content-left {
