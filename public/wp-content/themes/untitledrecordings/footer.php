@@ -6,7 +6,7 @@
             <a href="https://discord.gg/G5V8QG9"><i class="fab fa-discord"></i></a>
         </div>
         <a href="<?php echo get_site_url(); ?>" class="footer-logo"><img src="<?php echo get_field('logo-full', 'option')["url"]; ?>" alt="<?php echo get_field('logo-full', 'option')["alt"]; ?>"></a>
-        <p>© 2020 Untitled Recordings | Designed by <a href="https://jamescliff.com" class="footer-link" target="_blank" rel="noopener noreferrer">James Cliff</a></p>
+        <p>© 2020 Untitled Recordings | Website by <a href="https://jamescliff.com" class="footer-link" target="_blank" rel="noopener noreferrer">James Cliff</a></p>
     </div>
 </footer>
 <?php wp_footer(); ?>
