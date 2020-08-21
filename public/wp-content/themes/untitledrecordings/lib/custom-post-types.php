@@ -47,7 +47,7 @@ function register_projects_post_type() {
         'page-attributes',
         'post-formats'
     ],
-    'taxonomies'            => [],
+    //'taxonomies'            => ['post_tag'],
     'hierarchical'          => false,
     'public'                => true,
     'show_ui'               => true,
