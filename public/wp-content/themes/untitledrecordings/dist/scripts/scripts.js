@@ -6,5 +6,6 @@ $(document).ready(function(){
     });
 
     $(".js-fillcolor").fillColor({type: 'avgYUV'});
-    console.log(fillColor({type: 'avgYUV'}));
+    //console.log(fillColor());
+
 });
