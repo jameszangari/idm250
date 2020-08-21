@@ -22,6 +22,11 @@ require get_template_directory() . '/lib/setup.php';
 require get_template_directory() . '/lib/custom-post-types.php';
 
 /**
+ * Register custom post types
+ */
+require get_template_directory() . '/lib/custom-taxonomies.php';
+
+/**
  * Register theme settings with advanced custom fields
  */
 require get_template_directory() . '/lib/acf.php';
