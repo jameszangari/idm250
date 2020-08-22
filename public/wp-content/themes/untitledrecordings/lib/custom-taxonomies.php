@@ -117,4 +117,30 @@ function register_taxonomy_for_music_type() {
   ]);
 }
 
+function register_taxonomy_for_artist_roles() {
+  $labels = [
+  'name'              => _x('Roles', 'taxonomy general name'),
+  'singular_name'     => _x('Roles', 'taxonomy singular name'),
+  'search_items'      => __('Search Roles'),
+  'all_items'         => __('All Roles'),
+  'parent_item'       => __('Parent Roles'),
+  'parent_item_colon' => __('Parent Roles:'),
+  'edit_item'         => __('Edit Roles'),
+  'update_item'       => __('Update Roles'),
+  'add_new_item'      => __('Add New Roles'),
+  'new_item_name'     => __('New Roles Name'),
+  'menu_name'         => __('Roles'),
+];
 
+  // Now register the taxonomy
+  register_taxonomy('artist_roles', ['artists'], [
+  'hierarchical'      => false,
+  'labels'            => $labels,
+  'show_ui'           => true,
+  'show_admin_column' => true,
+  'query_var'         => true,
+  'show_in_rest'      => true,
+  'rewrite'           => ['slug' => 'roles'],
+]);
+}
+add_action('init', 'register_taxonomy_for_artist_roles');
