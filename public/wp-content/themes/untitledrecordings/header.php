@@ -9,7 +9,10 @@
 <body <?php body_class(); ?>>
 <header class="header">
   <div class="header__container header__content">
-    <a href="<?php echo get_site_url(); ?>" class="header__logo_link"><img class="header__logo" src="<?php echo get_field('logo-favicon', 'option')["url"]; ?>" alt="<?php echo get_field('logo-full', 'option')["alt"]; ?>"></a>
+    <a href="<?php echo get_site_url(); ?>" class="header__logo_link">
+      <img class="header__logo" src="<?php echo get_field('logo-favicon', 'option')["url"]; ?>" alt="<?php echo get_field('logo-full', 'option')["alt"]; ?>">
+      <img src="<?php echo get_field('logo-full', 'option')["url"]; ?>" alt="<?php echo get_field('logo-full', 'option')["alt"]; ?>" class="header__logo_full"/>
+    </a>
     
     <button class="header__hamburger"><!-- <i class="fas fa-bars"></i> -->
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 25 18" fill="none">
@@ -23,12 +26,12 @@
           <input type="submit" value="Search" class="search-bar-submit">  
         </form>
     </div>
-    <?php wp_nav_menu(['theme_location' => 'primary_menu']);?>
+    <?php wp_nav_menu(['theme_location' => 'primary_menu']); ?>
       <div class="menu-wrapper-icons">
-        <a href="mailto:inquiries@untitledrecordings.net" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
-        <a href="https://instagram.com/untitledrecordings" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/untrecordings" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-        <a href="https://discord.gg/G5V8QG9" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+        <a href="<?php echo get_field('Email', 'option')["url"]; ?>" target="<?php echo get_field('Email', 'option')["target"]; ?>"><i class="fas fa-envelope"></i></a>
+        <a href="<?php echo get_field('Instagram', 'option')["url"]; ?>" target="<?php echo get_field('Instagram', 'option')["target"]; ?>"><i class="fab fa-instagram"></i></a>
+        <a href="<?php echo get_field('Twitter', 'option')["url"]; ?>" target="<?php echo get_field('Twitter', 'option')["url"]; ?>"><i class="fab fa-twitter"></i></a>
+        <a href="<?php echo get_field('Discord', 'option')["url"]; ?>" target="<?php echo get_field('Discord', 'option')["url"]; ?>"><i class="fab fa-discord"></i></a>
       </div>
     </div>
   </div>
