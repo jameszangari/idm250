@@ -7,7 +7,7 @@
             <a href="<?php echo get_field('Discord', 'option')["url"]; ?>" target="<?php echo get_field('Discord', 'option')["target"]; ?>"><i class="fab fa-discord"></i></a>
         </div>
         <a href="<?php echo get_site_url(); ?>" class="footer-logo"><img src="<?php echo get_field('logo-full', 'option')["url"]; ?>" alt="<?php echo get_field('logo-full', 'option')["alt"]; ?>"></a>
-        <p>© 2020 Untitled Recordings | Website by <a href="https://jamescliff.com" class="footer-link" target="_blank" rel="noopener noreferrer">James Cliff</a></p>
+        <p><?php echo get_field('Copyright', 'option') ?><a href="<?php echo get_field('Copyright_link', 'option')["url"]; ?>" class="footer-link" target="<?php echo get_field('Copyright_link', 'option')["target"]; ?>"><?php echo get_field('Copyright_link', 'option')["title"]; ?></a></p>
     </div>
 </footer>
 <?php wp_footer(); ?>
