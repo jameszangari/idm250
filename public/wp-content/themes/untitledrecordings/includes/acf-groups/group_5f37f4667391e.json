@@ -68,10 +68,10 @@
             ]
         },
         {
-            "key": "field_5f37fb49c2a09",
-            "label": "Artists",
-            "name": "artists",
-            "type": "repeater",
+            "key": "field_5f426452e3a67",
+            "label": "About Us",
+            "name": "about_us",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -80,16 +80,31 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5f431ebb8ed67",
+            "label": "Services",
+            "name": "services",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5f37fb80c2a0a",
-                    "label": "Profile Image",
-                    "name": "profile_image",
+                    "key": "field_5f431ed48ed68",
+                    "label": "Recording",
+                    "name": "recording",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -100,7 +115,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "thumbnail",
+                    "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -111,10 +126,82 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5f37fb8ec2a0b",
-                    "label": "Artist Name",
-                    "name": "artist_name",
-                    "type": "text",
+                    "key": "field_5f431eea8ed69",
+                    "label": "Production",
+                    "name": "production",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5f431f178ed6a",
+                    "label": "Mixing",
+                    "name": "mixing",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5f431f1f8ed6b",
+                    "label": "Mastering",
+                    "name": "mastering",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5f431f288ed6c",
+                    "label": "Services Description",
+                    "name": "services_description",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -125,79 +212,15 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
                 },
                 {
-                    "key": "field_5f37fb96c2a0c",
-                    "label": "Artist Role",
-                    "name": "artist_role",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5f37fbcac2a0d",
-                    "label": "Instagram",
-                    "name": "instagram",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_5f37fbd8c2a0e",
-                    "label": "Twitter",
-                    "name": "twitter",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_5f37fbe2c2a0f",
-                    "label": "SoundCloud",
-                    "name": "soundcloud",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_5f37fbecc2a10",
+                    "key": "field_5f431f558ed6d",
                     "label": "Email",
                     "name": "email",
-                    "type": "link",
+                    "type": "email",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -206,7 +229,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         }
@@ -228,5 +254,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597960796
+    "modified": 1598234914
 }

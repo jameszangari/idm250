@@ -7,7 +7,7 @@
             "label": "Profile Image",
             "name": "profile_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Set featured image with same image",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -55,6 +55,58 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_5f41af678d5df",
+            "label": "SoundCloud",
+            "name": "soundcloud",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5f41a8de54e67",
+            "label": "Email",
+            "name": "email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5f41b3ccffc4f",
+            "label": "Bio",
+            "name": "bio",
+            "type": "textarea",
+            "instructions": "Short blurb about this producer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -74,5 +126,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1598054231
+    "modified": 1598144865
 }
