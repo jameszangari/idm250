@@ -8,10 +8,23 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="header">
+  <?php
+      $email = get_field('email', 'option');
+      $instagram = get_field('instagram', 'option');
+      $twitter = get_field('twitter', 'option');
+      $discord = get_field('discord', 'option');
+      $twitch = get_field('twitch', 'option');
+      $headerlogo = get_field('logo-favicon', 'option');
+      $headerlogo2 = get_field('logo-full', 'option');
+  ?>
   <div class="header__container header__content">
     <a href="<?php echo get_site_url(); ?>" class="header__logo_link">
-      <img class="header__logo" src="<?php echo get_field('logo-favicon', 'option')["url"]; ?>" alt="<?php echo get_field('logo-full', 'option')["alt"]; ?>">
-      <img src="<?php echo get_field('logo-full', 'option')["url"]; ?>" alt="<?php echo get_field('logo-full', 'option')["alt"]; ?>" class="header__logo_full"/>
+      <?php if($headerlogo) : ?>
+        <img class="header__logo" src="<?php echo $headerlogo["url"]; ?>" alt="<?php echo $headerlogo2["alt"]; ?>">
+      <?php endif; ?>
+      <?php if($headerlogo2) : ?>
+        <img src="<?php echo $headerlogo2["url"]; ?>" alt="<?php echo $headerlogo2["alt"]; ?>" class="header__logo_full"/>
+      <?php endif; ?>
     </a>
     
     <button class="header__hamburger"><!-- <i class="fas fa-bars"></i> -->
@@ -28,10 +41,21 @@
     </div>
     <?php wp_nav_menu(['theme_location' => 'primary_menu']); ?>
       <div class="menu-wrapper-icons">
-        <a href="<?php echo get_field('Email', 'option')["url"]; ?>" target="<?php echo get_field('Email', 'option')["target"]; ?>"><i class="fas fa-envelope"></i></a>
-        <a href="<?php echo get_field('Instagram', 'option')["url"]; ?>" target="<?php echo get_field('Instagram', 'option')["target"]; ?>"><i class="fab fa-instagram"></i></a>
-        <a href="<?php echo get_field('Twitter', 'option')["url"]; ?>" target="<?php echo get_field('Twitter', 'option')["target"]; ?>"><i class="fab fa-twitter"></i></a>
-        <a href="<?php echo get_field('Discord', 'option')["url"]; ?>" target="<?php echo get_field('Discord', 'option')["target"]; ?>"><i class="fab fa-discord"></i></a>
+        <?php if($email) : ?>
+          <a href="<?php echo $email["url"]; ?>" target="<?php echo $email["target"]; ?>"><i class="fas fa-envelope"></i></a>
+        <?php endif; ?>
+        <?php if($instagram) : ?>
+          <a href="<?php echo $instagram["url"]; ?>" target="<?php echo $instagram["target"]; ?>"><i class="fab fa-instagram"></i></a>
+        <?php endif; ?>
+        <?php if($twitter) : ?>
+          <a href="<?php echo $twitter["url"]; ?>" target="<?php echo $twitter["target"]; ?>"><i class="fab fa-twitter"></i></a>
+        <?php endif; ?>
+        <?php if($discord) : ?>
+          <a href="<?php echo $discord["url"]; ?>" target="<?php echo $discord["target"]; ?>"><i class="fab fa-discord"></i></a>
+        <?php endif; ?>
+        <?php if($twitch) : ?>
+          <a href="<?php echo $twitch["url"]; ?>" target="<?php echo $twitch["target"]; ?>"><i class="fab fa-twitch"></i></a>
+        <?php endif; ?>
       </div>
     </div>
   </div>
