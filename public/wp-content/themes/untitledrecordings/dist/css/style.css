@@ -775,6 +775,9 @@ h2 {
 }
 .portfolio-hover-button-link {
   text-decoration: none;
+  width: 175px;
+  height: 40px;
+  margin: auto;
 }
 .portfolio-hover-button {
 	display: flex;
@@ -809,6 +812,8 @@ h2 {
 
 .portfolio-button-link {
   text-decoration: none;
+  width: 225px;
+  margin: auto;
 }
 .portfolio-button {
 	display: flex;
