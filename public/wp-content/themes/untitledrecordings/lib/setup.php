@@ -104,7 +104,7 @@ add_filter( 'pre_get_posts','exclude_pages_from_search' );
  * @return void
  */
 function my_change_sort_order($query){
-    if(is_post_type_archive($artists)):
+    if(is_post_type_archive($post_types = 'artists')):
        //Set the order ASC or DESC
        $query->set( 'order', 'ASC' );
        //Set the orderby
