@@ -96,3 +96,19 @@ function exclude_pages_from_search($query) {
     return $query;
 }
 add_filter( 'pre_get_posts','exclude_pages_from_search' );
+
+/**
+ * Set archive results on artists page to ascending order by title
+ *
+ * @link https://developer.wordpress.org/reference/functions/is_post_type_archive/
+ * @return void
+ */
+function my_change_sort_order($query){
+    if(is_post_type_archive($artists)):
+       //Set the order ASC or DESC
+       $query->set( 'order', 'ASC' );
+       //Set the orderby
+       $query->set( 'orderby', 'title' );
+    endif;    
+};
+add_action( 'pre_get_posts', 'my_change_sort_order'); 
