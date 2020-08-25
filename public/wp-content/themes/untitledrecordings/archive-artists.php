@@ -27,88 +27,28 @@
       </a>
       
       <div class="search-result-tag-group">
-      <div class="column-1">
+      <p class="search-result-type-tag">  
       <?php
         $id = get_the_ID();
-        $type_list = get_the_terms( $id, 'music_type' );
+        $artist_roles = get_the_terms( $id, 'artist_roles' );
+        $total = count($artist_roles);
       ?>
-      <?php if ($type_list) : ?>
-        <?php foreach ($type_list as $type): ?>
-            <?php
-            // Get sub field values.
-            $profile_image = get_field('profile_image', $type->taxonomy . '_' . $type->term_id);
-            $name = $type->name;
-            $link = get_term_link($type->term_id);
-            //var_dump($link);
-            ?>  
-        <a href="<?php echo $link ;?>">
-          <p class="search-result-type-tag"><?php echo $type->name; ?> by</p>
-        </a>
-        <?php endforeach; ?>
-        <?php endif; ?>
-        </div>
-
-      <div class="column-2">
-      <?php
-        $id = get_the_ID();
-        $genre_list = get_the_terms( $id, 'music_genre' );
-      ?>
-      <?php if ($genre_list) : ?>
-        <?php foreach ($genre_list as $genre): ?>
-            <?php
-            // Get sub field values.
-            $name = $genre->name;
-            $link = get_term_link($genre->term_id);
-            //var_dump($link);
-            ?>  
-        <a href="<?php echo $link ;?>">
-          <p><?php echo $genre->name; ?></p>
-        </a>
-        <?php endforeach; ?>
-        <?php endif; ?>
-
-      <?php
-        $id = get_the_ID();
-        $year_list = get_the_terms( $id, 'music_year' );
-      ?>
-      <?php if ($year_list) : ?>
-        <?php foreach ($year_list as $year): ?>
-            <?php
-            // Get sub field values.
-            $name = $year->name;
-            $link = get_term_link($year->term_id);
-            //var_dump($link);
-            ?>  
-        <a href="<?php echo $link ;?>">
-          <p><?php echo $year->name; ?></p>
-        </a>
-        <?php endforeach; ?>
-        <?php endif; ?>
+      <?php if ($artist_roles) : ?>
+      <?php foreach ($artist_roles as $key => $roles){ ?>
+        <?php
+          $name = $roles->name;
+          $link = get_term_link($roles->term_id);
+        ?>  
+        <a href="<?php echo $link; ?>"> 
+            <?php echo $key + 1 != $total ? $roles->name . ', ' : $roles->name  ;?>
+        </a>  
+        <?php } ?>
+      <?php endif; ?> 
+      </p> 
       </div>
-      </div>
-
-      <?php if (get_field('producers')) : ?>
-        <div class="search-result-artist-group">
-          <?php foreach (get_field('producers') as $producer): ?> 
-            <?php //var_dump($producer); ?>
-          <?php 
-            $profile_image = get_field('profile_image', $producer->ID); 
-          ?>
-          <?php if ($profile_image) : ?>
-            <a href="<?php echo get_permalink( $producer->ID ) ;?>">
-              <img src="<?php echo $profile_image["url"] ?>" alt="<?php echo $profile_image["alt"] ?>" class="search-result-artist-image">
-            </a>
-          <?php endif; ?>
-            <a href="<?php echo get_permalink( $producer->ID ) ;?>">
-              <p class="search-result-artist-title"><?php echo $producer->post_title ;?></p>  
-            </a>
-          <?php endforeach; ?>
-        </div>
-      <?php endif; ?>
       </div>
     <?php endwhile; ?>
   </div>
-
 
   <?php else: ?>
     <h3 class="search-result-query-error">No Results Found!</h3>
