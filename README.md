@@ -4,5 +4,4 @@ Untitled Recordings Website built using Wordpress as a Content Management System
 
 ![Logo](http://untitledrecordings.net/media/logos/ur_200.png)
 
-#### untitledrecordings.net
-[untitledrecordings.net]: https;//untitledrecordings.net
+#### [untitledrecordings.net](https;//untitledrecordings.net)
