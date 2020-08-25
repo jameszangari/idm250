@@ -39,7 +39,8 @@
           <input type="submit" value="Search" class="search-bar-submit">  
         </form>
     </div>
-    <?php wp_nav_menu(['theme_location' => 'primary_menu']); ?>
+    <div class="menu-nagivation-container">
+    <?php wp_nav_menu(['theme_location' => 'primary_menu', 'container' => false]); ?>
       <div class="menu-wrapper-icons">
         <?php if($email) : ?>
           <a href="<?php echo $email["url"]; ?>" target="<?php echo $email["target"]; ?>"><i class="fas fa-envelope"></i></a>
@@ -57,6 +58,7 @@
           <a href="<?php echo $twitch["url"]; ?>" target="<?php echo $twitch["target"]; ?>"><i class="fab fa-twitch"></i></a>
         <?php endif; ?>
       </div>
+    </div>
     </div>
   </div>
 </header></a>
