@@ -352,7 +352,7 @@ h2 {
 }
 
 .menu-wrapper i {
-  font-size: 48px;
+  font-size: 36px;
   color: var(--white);
   z-index: 99;
   padding: 0 12px;
@@ -361,10 +361,15 @@ h2 {
 
 .menu-wrapper-icons {
   padding-top: 2em;
-  position: fixed;
   bottom: 2em;
   left: 0;
   right: 0;
+}
+@media screen and (min-width : 375px) {
+  .menu-wrapper-icons {
+    position: relative;
+    padding-top: 4em;
+  }
 }
 
 .fa-envelope:hover {
@@ -383,6 +388,10 @@ h2 {
   color: #7289DA;
 }
 
+.fa-twitch:hover{
+  color: #6441a5;
+}
+
 .menu-wrapper {
   display: none;
   height: 100vh;
@@ -390,8 +399,13 @@ h2 {
   padding-top: 80px;
   background-color: black;
   z-index: 98;
+  overflow-y: scroll;
 }
-
+@media screen and (min-width : 768px) {
+  .menu-wrapper {
+    overflow-y: hidden;
+  }
+}
 
 .menu {
   display: flex;
@@ -405,7 +419,6 @@ h2 {
   text-transform: uppercase;
   z-index: 98;
   overflow-y: hidden;
-
 }
 .menu-item {
 	display: block;
@@ -423,6 +436,11 @@ h2 {
 
 .current-menu-item a {
   color: #5E687E;
+}
+
+.menu-nagivation-container {
+  height: 100vh;
+  padding-bottom: 2em;
 }
 
 /*------------------ FOOTER STYLES ------------------*/
@@ -490,7 +508,6 @@ h2 {
 }
 /*------------------ FRONT PAGE STYLES ------------------*/
 .front-page-posts {
-  /* height: 50vh; */
   margin-top: 50px;
   background: var(--black);
   display: flex;
@@ -504,7 +521,7 @@ h2 {
   height: 500px;
   object-fit: cover;
     object-position: 100% 30%;
-  filter: blur(4px);
+  filter: blur(2px);
 }
 .front-page-posts a {
   text-decoration: none;
@@ -523,7 +540,7 @@ h2 {
   font-style: normal;
   font-size: 36px;
   padding-bottom: 32px;
-  margin-top: 2.5em;
+  margin-top: 2.75em;
 }
 .front-page-posts-title {
   font-family: var(--font-heading-black);
@@ -767,9 +784,12 @@ h2 {
   transform: translate(0, -202px);
 }
 .portfolio-grid-hover h3 {
-  color: var(--black);
+  color: var(--white);
+  text-shadow: 2px 2px 4px var(--black);
+  /* border-bottom: 2px solid var(--white); */
   padding: 8px 15px;
-  font-size: 18px;
+  font-family: var(--font-heading-black);
+  font-size: 22px;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -1110,13 +1130,42 @@ h2 {
   color: var(--white);
   padding-bottom: 0.5rem;
 }
-.single-artists-about p {
+.single-artists-about-text {
   font-family: var(--font-body);
   color: var(--white);
   font-size: 20px;
   line-height: normal;
-  padding-top: 2em;
+  padding: 2em;
   margin: 0 8em;
+}
+
+.single-artists-quote {
+  position: relative;
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--white);
+  font-size: 24px;
+  line-height: normal;
+  margin: 0 8em;
+  padding-left: 1em;
+  padding: 0.35em 40px;
+  border-left: 6px solid var(--white);
+}
+.single-artists-quote:before {
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -16px;
+  top: -20px;
+  color: var(--gray);
+}
+.single-artists-quote cite {
+  color: #999999;
+  font-size: 22px;
+  display: block;
+  margin-top: 1rem;
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -1188,7 +1237,10 @@ h2 {
     padding-bottom: 2em;
   }
 
-  .single-artists-about p {
+  .single-artists-about-text {
+    margin: 0;
+  }
+  .single-artists-quote {
     margin: 0;
   }
 
@@ -1260,6 +1312,9 @@ h2 {
   font-weight: bold;
 }
 
+.music-posts-tags-row .column-2 {
+  text-align: right;
+}
 .music-posts-tags-row .column-2 a{
   text-decoration: underline;
   color: var(--black);
@@ -1535,7 +1590,7 @@ h2 {
   }
 }
 /* Desktops and laptops ----------- */
-@media screen and (max-width: 1224px) {
+@media screen and (max-width: 1024px) {
   .music-posts-content {
     padding-top: 5em;
     display: flex;
@@ -1702,6 +1757,18 @@ ARCHIVE PAGE STYLES
   padding-top: 4em;
   padding-bottom: 1em;
 }
+@media screen and (max-width : 768px) {
+  .archive-hero-image {
+    width: 430px;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width : 475px) {
+  .archive-hero-image {
+    width: 300px;
+    max-width: 100%;
+  }
+}
 
 .archive-result-info-group {
   display: grid;
@@ -1806,8 +1873,8 @@ ARCHIVE PAGE STYLES
   font-size: 24px;
   color: var(--charcoal);
 }
-.search-result-type-tag:hover {
-  color: var(--darkgray);
+.search-result-type-tag a:hover {
+  color: var(--gray) !important;
 }
 .search-result-tag-group a:visited {
   color: var(--charcoal);
@@ -1915,7 +1982,6 @@ ARCHIVE PAGE STYLES
     padding-bottom: 3em;
   }
 }
-
 
 /* iPhone SE ----------- */
 @media screen and (max-width : 320px) {
