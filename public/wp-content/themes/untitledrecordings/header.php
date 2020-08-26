@@ -17,7 +17,7 @@
       $headerlogo = get_field('logo-favicon', 'option');
       $headerlogo2 = get_field('logo-full', 'option');
   ?>
-  <div class="header__container header__content">
+  <div class="header__content">
     <a href="<?php echo get_site_url(); ?>" class="header__logo_link">
       <?php if($headerlogo) : ?>
         <img class="header__logo" src="<?php echo $headerlogo["url"]; ?>" alt="<?php echo $headerlogo2["alt"]; ?>">
