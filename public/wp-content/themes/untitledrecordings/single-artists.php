@@ -79,24 +79,17 @@
   </div>
   <?php endif; ?>
 
+  <?php 
+    $latest_music = get_related_portfolio_work($id);
+  ?>
+  <?php if($latest_music) : ?>
+
   <div class="portfolio">
     <h2>Portfolio</h2>
     <img src="<?php bloginfo('template_directory'); ?>/dist/images/waveform_white.png" alt="Waveform" class="heading-waveform-image">
 
-  <?php 
-    $id = get_the_ID();
-    $args = array(
-      'numberposts' => 12,
-      'post_type'   => 'music',
-      'include'     => $id,
-    );
-
-    $latest_music = get_posts( $args );
-    var_dump($args);
-  ?>
 
   <div class="portfolio-grid">
-  <?php if($latest_music) : ?>
     <?php foreach ($latest_music as $music) :?>
       <div class="portfolio-grid-image">
         <img src="<?php echo get_the_post_thumbnail_url($music->ID); ?>" alt="<?php echo $music->post_title; ?>">
@@ -111,8 +104,7 @@
         </div>
       </div>
     <?php endforeach; ?>
-  <?php endif; ?>
-  </div>
+    </div>
   <a href="<?php echo get_post_type_archive_link('music'); ?>" class="portfolio-button-link">
       <div class="portfolio-button">
         <p>View All Releases</p>
@@ -120,6 +112,7 @@
       </div>
     </a>     
   </div>
+  <?php endif; ?>
   <?php endwhile; ?>
 </main>
 <?php get_footer(); ?>
