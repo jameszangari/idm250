@@ -743,9 +743,9 @@ h2 {
   .portfolio-grid-hover {
     transform: translate(0, -302px) !important;
   }
-  .portfolio-grid-hover h3 {
+  /* .portfolio-grid-hover h3 {
     font-size: 32px !important;
-  }
+  } */
 }
 .portfolio-grid-image img {
   width: 250px;
@@ -759,17 +759,15 @@ h2 {
   width: 250px;
   height: 250px;
   background: rgba(196, 196, 196, 0.75);
-  color: white;
-  visibility: hidden;
-  -webkit-transition: visibility 0s, opacity 0.5s linear; 
-  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+  transition: all .3s ease;
 }
 
 .portfolio-grid :hover .portfolio-grid-hover{
   width: 250px;
   height: 250px;
-  visibility: visible;
- }
+  opacity: 1;
+}
 .portfolio-grid-hover {
   position: absolute;
   transform: translate(0, -252px);
@@ -779,7 +777,7 @@ h2 {
   text-shadow: 2px 2px 4px var(--black);
   padding: 8px 15px;
   font-family: var(--font-heading-black);
-  font-size: 22px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: bold;
 }
