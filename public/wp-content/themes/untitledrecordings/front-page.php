@@ -2,47 +2,8 @@
 <?php if (have_posts()): ?>
 <main class="main-content-front">
   <?php while (have_posts()) : the_post(); ?>
-
-  <?php 
-  $args = array(
-    'numberposts' => 1,
-    'post_type'   => 'music'
-  );
   
-  $latest_music = get_posts( $args );
-  ?>
-  <div class="front-page-posts">
-  <?php if($latest_music) : ?>
-    <?php foreach ($latest_music as $music) :?>
-      <img src="<?php echo get_the_post_thumbnail_url($music->ID); ?>" alt="<?php echo $music->post_title; ?>" class="front-page-posts-thumbnail">
-    <div class="front-page-posts-text-group">
-    <?php if (get_field('producers')) : ?>
-      <h3 class="front-page-posts-artists">
-      <?php
-        $producers = get_field('producers', $music->ID);
-        $total = count($producers);
-
-        foreach ($producers as $key => $producer) {
-      ?>
-      <?php echo $key + 1 != $total ? $producer->post_title . ', ' : $producer->post_title  ;?>
-      <?php } ?>
-      </h3>
-  <?php endif; ?>
-
-    <h2 class="front-page-posts-title">'<?php echo $music->post_title; ?>'</h2>
-    <h2 class="front-page-posts-out">Out Now</h2>
-
-    <a href="<?php echo get_permalink($music->ID); ?>" class="front-page-artist-button-link">
-      <div class="front-page-post-button">
-          <p>View Release</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#F7F7FF" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>               
-      </div>
-    </a>      
-    <?php //var_dump($latest_music); ?>
-    </div>
-  <?php endforeach; ?>
-  <?php endif; ?>
-  </div>
+  <?php the_content(); ?>
 
   <?php 
     // Get sub field values.
