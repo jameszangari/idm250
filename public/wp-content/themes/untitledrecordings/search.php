@@ -12,7 +12,7 @@
     </div>
     <div class="search-result-info-group">
       <h3 class="search-result-query">Search results for: <strong><?php echo esc_html( get_search_query( false ) ); ?></strong></h3>
-      <p class="search-result-number"><strong><?php echo $countPosts = $wp_the_query->post_count;?></strong> results found</p>
+      <p class="search-result-number"><strong><?php echo $countPosts = $wp_the_query->found_posts;?></strong> results found</p>
     </div>
   </div>
 
@@ -114,7 +114,14 @@
     <?php endwhile; ?>
   </div>
 
-
+  <div class="pagination-group">
+  <?php the_posts_pagination( [
+    'mid_size'           => 2,
+    'screen_reader_text' => ' ',
+   ] ); 
+  ?>
+  </div>
+  
   <?php else: ?>
     <h3 class="search-result-query-error">No Results Found!</h3>
   <?php endif; ?>
