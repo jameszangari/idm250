@@ -8,7 +8,7 @@
   <div class="archive-result-info-group">
     <?php $tax = $wp_query->get_queried_object(); ?>
     <h3 class="archive-result-query">All Untitled Recordings <?php echo $tax->name; ?></h3>
-    <p class="archive-result-number"><strong><?php echo $countPosts = $wp_the_query->post_count;?></strong> results found</p>
+    <p class="archive-result-number"><strong><?php echo $countPosts = $wp_the_query->found_posts;?></strong> results found</p>
   </div>
 
   <?php if (have_posts()): ?>
@@ -48,6 +48,14 @@
       </div>
       </div>
     <?php endwhile; ?>
+  </div>
+  
+  <div class="pagination-group">
+  <?php the_posts_pagination( [
+    'mid_size'           => 2,
+    'screen_reader_text' => ' ',
+   ] ); 
+  ?>
   </div>
 
   <?php else: ?>
