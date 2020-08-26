@@ -25,41 +25,39 @@
       <a href="<?php the_permalink(); ?>" class="search-result-title-link">
         <h1><?php the_title(); ?></h1>
       </a>
-      
-      <div class="search-result-tag-group">
-      <div class="column-1">
+
       <?php
         $id = get_the_ID();
         $type_list = get_the_terms( $id, 'music_type' );
       ?>
       <?php if ($type_list) : ?>
+        <div class="search-result-tag-group">
+        <div class="column-1">
         <?php foreach ($type_list as $type): ?>
             <?php
             // Get sub field values.
             $profile_image = get_field('profile_image', $type->taxonomy . '_' . $type->term_id);
             $name = $type->name;
             $link = get_term_link($type->term_id);
-            //var_dump($link);
             ?>  
         <a href="<?php echo $link ;?>">
           <p class="search-result-type-tag"><?php echo $type->name; ?> by</p>
         </a>
         <?php endforeach; ?>
+        </div>       
         <?php endif; ?>
-        </div>
 
-      <div class="column-2">
       <?php
         $id = get_the_ID();
         $genre_list = get_the_terms( $id, 'music_genre' );
       ?>
       <?php if ($genre_list) : ?>
+        <div class="column-2">
         <?php foreach ($genre_list as $genre): ?>
             <?php
             // Get sub field values.
             $name = $genre->name;
             $link = get_term_link($genre->term_id);
-            //var_dump($link);
             ?>  
         <a href="<?php echo $link ;?>">
           <p><?php echo $genre->name; ?></p>
@@ -77,15 +75,14 @@
             // Get sub field values.
             $name = $year->name;
             $link = get_term_link($year->term_id);
-            //var_dump($link);
             ?>  
         <a href="<?php echo $link ;?>">
           <p><?php echo $year->name; ?></p>
         </a>
         <?php endforeach; ?>
+        </div>
+        </div>
         <?php endif; ?>
-      </div>
-      </div>
 
       <?php if (get_field('producers')) : ?>
         <div class="search-result-artist-group">
