@@ -1605,7 +1605,7 @@ h2 {
   transition: all .2s ease-in-out;
 }
 
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
   .music-posts-content-right {
     width: 650px;
   }
