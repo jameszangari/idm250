@@ -992,8 +992,13 @@ CAROUSEL STYLES
 
 ------------------*/
 .wppsac-post-slider .wppsac-post-image-bg img {
-  object-position: 100% 35%;
+  object-position: 100% 35% !important;
+  width: 100vw;
 }
+@media screen and (max-width : 768px) {
+.wppsac-post-slider.design-1 .wppsac-post-image-bg img, .wppsac-post-slider.design-2 .wppsac-post-image-bg img, .wppsac-post-slider.design-3 .wppsac-post-image-bg img {
+  max-width: 100vw !important;
+}}
 .wppsac-post-slider.design-3 .wppsac-post-overlay:hover > .wppsac-post-short-content {
   height: 46% !important;
 }
