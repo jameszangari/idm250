@@ -81,17 +81,17 @@ function register_theme_navigation() {
 add_action('after_setup_theme', 'register_theme_navigation');
 
 /**
- * Set search results limit to 100 / Remove pages from results
+ * Set search results limit / Remove pages from results
  *
  * @link https://www.wpexplorer.com/limit-wordpress-search/
  * @return void
  */
 function exclude_pages_from_search($query) {
     if ( $query->is_main_query() && is_search() ) {
-        $query->set( 'posts_per_page', '100' );
+        $query->set( 'posts_per_page', '12' );
         global $wp_post_types;
-        $wp_post_types['page']->exclude_from_search = true;
-        $wp_post_types['artists']->exclude_from_search = true;
+        //$wp_post_types['page']->exclude_from_search = true;
+        //$wp_post_types['artists']->exclude_from_search = true;
     }
     return $query;
 }
@@ -112,3 +112,35 @@ function my_change_sort_order($query){
     endif;    
 };
 add_action( 'pre_get_posts', 'my_change_sort_order'); 
+
+
+function get_related_portfolio_work($artist_id){
+    // Get all music posts
+    $args = array(
+        'numberposts' => -1,
+        'post_type'   => 'music',
+      );
+  
+    $all_music = get_posts( $args );
+    // Loop through music posts
+    $artist_portfolio_array = [];
+
+    foreach ($all_music as $music_post){
+        // Get ACF producers assigning variable
+        $post_id = $music_post->ID;
+        $producers = get_field('producers', $post_id);
+        $producer_ids = [];
+
+        // Looping through all ACF producers field within music posts
+        foreach ($producers as $producer){
+            $producer_ids[] = $producer->ID;
+        }
+
+        // Check to see if current artist is included in music post
+        if (in_array($artist_id, $producer_ids)){
+            $artist_portfolio_array[] = $music_post;   
+        }
+    }
+    // Return values/posts
+    return $artist_portfolio_array;
+}
