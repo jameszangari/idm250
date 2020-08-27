@@ -24,6 +24,7 @@
 /public/index.php
 /public/.htaccess
 /public/readme.html
+untitledrecordings.sql
 
 # Allow
 !/public/wp-content/themes
