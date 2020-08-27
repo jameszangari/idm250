@@ -221,7 +221,7 @@ h2 {
 }
 @media screen and (max-width : 600px) {
   h2 {
-    font-size: 36px;
+    font-size: 34px;
     text-transform: uppercase;
   }
 } 
@@ -521,6 +521,7 @@ h2 {
   margin: auto;
   color: var(--white);
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 .front-page-about p {
   font-family: var(--font-body);
@@ -541,6 +542,7 @@ h2 {
 .front-page-artists-group h2 {
   margin: auto;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .front-page-artists {
@@ -638,6 +640,7 @@ h2 {
   margin: auto;
   color: var(--white);
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 .portfolio-grid {
   display: grid;
@@ -867,6 +870,7 @@ h2 {
   margin: auto;
   color: var(--white);
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 .front-page-services-grid {
   display: grid;
