@@ -746,9 +746,6 @@ h2 {
   .portfolio-grid-hover {
     transform: translate(0, -302px) !important;
   }
-  /* .portfolio-grid-hover h3 {
-    font-size: 32px !important;
-  } */
 }
 .portfolio-grid-image img {
   width: 250px;
@@ -986,6 +983,46 @@ h2 {
 @media screen and (max-width : 414px) {
   .front-page-services-grid-bottom a {
     font-size: 18px;
+  }
+}
+
+/*------------------ 
+
+BEAT STORE STYLES 
+
+------------------*/
+
+.beat-store {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: var(--black);
+  padding: 3em 3em 4em 3em;
+}
+.beat-store h2 {
+  margin: auto;
+  color: var(--white);
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+.beat-store iframe {
+  margin: auto;
+  padding-top: 2em;
+}
+@media screen and (min-width : 1024px) {
+  .beat-store iframe {
+    width: 75%;
+  }
+}
+@media screen and (max-width : 600px) {
+  .beat-store {
+    padding: 3em 1rem 4em 1rem;
+  }
+}
+@media screen and (max-width : 375px) {
+  .beat-store {
+    padding: 3em 0 4em 0;
   }
 }
 /*------------------ 
