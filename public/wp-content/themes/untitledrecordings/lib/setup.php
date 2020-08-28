@@ -87,10 +87,7 @@ add_action('after_setup_theme', 'register_theme_navigation');
  * @return void
  */
 function search_results_number($query) {
-    if ( $query->is_search ) {
-        $query->set( 'posts_per_page', '12' );
-    }
-    if ( $query->is_archive ) {
+    if ( $query->is_search OR $query->is_archive ) {
         $query->set( 'posts_per_page', '12' );
     }
     return $query;
