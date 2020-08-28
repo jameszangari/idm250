@@ -88,7 +88,7 @@ add_action('after_setup_theme', 'register_theme_navigation');
  */
 function exclude_pages_from_search($query) {
     if ( $query->is_main_query() && is_search() ) {
-        $query->set( 'posts_per_page', '12' );
+        $query->set( 'posts_per_page', '14' );
         global $wp_post_types;
         //$wp_post_types['page']->exclude_from_search = true;
         //$wp_post_types['artists']->exclude_from_search = true;
