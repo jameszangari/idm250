@@ -81,20 +81,6 @@ function register_theme_navigation() {
 add_action('after_setup_theme', 'register_theme_navigation');
 
 /**
- * Set search results limit
- *
- * @link https://www.wpexplorer.com/limit-wordpress-search/
- * @return void
- */
-function search_results_number($query) {
-    if ( $query->is_search OR $query->is_archive ) {
-        $query->set( 'posts_per_page', '12' );
-    }
-    return $query;
-}
-add_filter( 'pre_get_posts','search_results_number' );
-
-/**
  * Set archive results on artists page to ascending order by title
  *
  * @link https://developer.wordpress.org/reference/functions/is_post_type_archive/
@@ -125,9 +111,9 @@ function get_related_portfolio_work($artist_id){
     foreach ($all_music as $music_post){
         // Get ACF producers assigning variable
         $post_id = $music_post->ID;
-        $producers = get_field('producers', $post_id);
+        $producers = get_field('ur_artists', $post_id);
         $producer_ids = [];
-
+   
         // Looping through all ACF producers field within music posts
         foreach ($producers as $producer){
             $producer_ids[] = $producer->ID;
