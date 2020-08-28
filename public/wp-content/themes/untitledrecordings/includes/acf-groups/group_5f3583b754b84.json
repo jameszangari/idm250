@@ -274,6 +274,28 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5f49049040e36",
+            "label": "UR Artists",
+            "name": "ur_artists",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "artists"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
         }
     ],
     "location": [
@@ -293,5 +315,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1598146256
+    "modified": 1598620860
 }
