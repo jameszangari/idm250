@@ -109,18 +109,22 @@ function get_related_portfolio_work($artist_id){
     $artist_portfolio_array = [];
 
     foreach ($all_music as $music_post){
-        // Get ACF producers assigning variable
+        // Get ACF assigned variable
         $post_id = $music_post->ID;
-        $producers = get_field('ur_artists', $post_id);
-        $producer_ids = [];
+        $producers = get_field('producers', $post_id);
+        $ur_artists = get_field('ur_artists', $post_id);
+        
+        $result = array_merge($ur_artists, $producers);
+        //var_dump($result);
+        $the_ids = [];
    
         // Looping through all ACF producers field within music posts
-        foreach ($producers as $producer){
-            $producer_ids[] = $producer->ID;
+        foreach ($result as $producer){
+            $the_ids[] = $producer->ID;
         }
 
         // Check to see if current artist is included in music post
-        if (in_array($artist_id, $producer_ids)){
+        if (in_array($artist_id, $the_ids)){
             $artist_portfolio_array[] = $music_post;   
         }
     }
