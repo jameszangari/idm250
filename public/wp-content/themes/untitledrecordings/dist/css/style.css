@@ -1903,6 +1903,7 @@ ARCHIVE PAGE STYLES
   text-transform: uppercase;
   padding-top: 1.5rem;
   margin-bottom: 0.5rem;
+  width: 320px;
 }
 .search-result-title-link {
   text-decoration: none;
@@ -2053,6 +2054,9 @@ ARCHIVE PAGE STYLES
     width: 270px;
   }
   .search-results-grid h1 {
+    width: 270px;
+  }
+  .search-result h1 {
     width: 270px;
   }
   .search-result-tag-group .column-2 {
