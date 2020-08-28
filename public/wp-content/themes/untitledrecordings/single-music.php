@@ -181,8 +181,8 @@
     <?php //ARTISTS GROUP ?>
     <div class="music-posts-bottom-group">    
         <div class="music-posts-artists-group">
-        <?php if (get_field('producers')) : ?>
-        <?php foreach (get_field('producers') as $artist): ?>
+        <?php if (get_field('ur_artists')) : ?>
+        <?php foreach (get_field('ur_artists') as $artist): ?>
         <?php
             // Get sub field values.
             $profile_image = get_field('profile_image', $artist->ID);
