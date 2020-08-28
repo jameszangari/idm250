@@ -181,6 +181,7 @@
     <?php //ARTISTS GROUP ?>
     <div class="music-posts-bottom-group">    
         <div class="music-posts-artists-group">
+        <?php if (get_field('producers')) : ?>
         <?php foreach (get_field('producers') as $artist): ?>
         <?php
             // Get sub field values.
@@ -188,11 +189,10 @@
             $name = $artist->post_title;
             $instagram = get_field('instagram', $artist->ID);
             $twitter = get_field('twitter', $artist->ID);
-            $link = $artist->guid;
         ?>
         <div class="music-posts-artists">
             <?php if($profile_image) : ?>
-                <a href="<?php echo $link; ?>"><img src="<?php echo $profile_image["url"] ?>" alt="<?php echo $profile_image["alt"] ?>"></a>
+                <img src="<?php echo $profile_image["url"] ?>" alt="<?php echo $profile_image["alt"] ?>">
             <?php endif; ?>
             <?php if($name) : ?>
                 <p class="music-posts-artist-name"><?php echo $name ?></p>
@@ -205,6 +205,7 @@
             <?php endif; ?>
         </div>
         <?php endforeach; ?>
+        <?php endif; ?>
         </div>
 
     <?php //TRACKLISTING ?>
