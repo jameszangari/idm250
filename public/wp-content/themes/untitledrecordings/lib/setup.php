@@ -81,21 +81,21 @@ function register_theme_navigation() {
 add_action('after_setup_theme', 'register_theme_navigation');
 
 /**
- * Set search results limit / Remove pages from results
+ * Set search results limit
  *
  * @link https://www.wpexplorer.com/limit-wordpress-search/
  * @return void
  */
-function exclude_pages_from_search($query) {
-    if ( $query->is_main_query() && is_search() ) {
-        $query->set( 'posts_per_page', '14' );
-        global $wp_post_types;
-        //$wp_post_types['page']->exclude_from_search = true;
-        //$wp_post_types['artists']->exclude_from_search = true;
+function search_results_number($query) {
+    if ( $query->is_search ) {
+        $query->set( 'posts_per_page', '12' );
+    }
+    if ( $query->is_archive ) {
+        $query->set( 'posts_per_page', '12' );
     }
     return $query;
 }
-add_filter( 'pre_get_posts','exclude_pages_from_search' );
+add_filter( 'pre_get_posts','search_results_number' );
 
 /**
  * Set archive results on artists page to ascending order by title
