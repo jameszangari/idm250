@@ -8,12 +8,12 @@
         <h1 class="music-posts-title"><?php the_title(); ?></h1>
         <div class="music-posts-tags-group">
 
-            <?php if (get_field('artists')) : ?>
+        <?php if (get_field('lead-artists')) : ?>
             <div class="music-posts-tags-row">
                 <p class="column-1">Artist(s)</p>
                 <p class="column-2">
                 <?php
-                    $artists = get_field('artists');
+                    $artists = get_field('lead-artists');
                     $total = count($artists);
 
                     foreach ($artists as $key => $artist) {
@@ -192,7 +192,7 @@
         ?>
         <div class="music-posts-artists">
             <?php if($profile_image) : ?>
-                <img src="<?php echo $profile_image["url"] ?>" alt="<?php echo $profile_image["alt"] ?>">
+                <a href="<?php echo get_permalink( $artist->ID ) ;?>"><img src="<?php echo $profile_image["url"] ?>" alt="<?php echo $profile_image["alt"] ?>"></a>
             <?php endif; ?>
             <?php if($name) : ?>
                 <p class="music-posts-artist-name"><?php echo $name ?></p>
