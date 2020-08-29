@@ -54,11 +54,11 @@
   </div>
   </div>
 
-  <div class="beat-store">
+<!--   <div class="beat-store">
     <h2>Beat Store</h2>
-    <img src="<?php bloginfo('template_directory'); ?>/dist/images/waveform_white.png" alt="Waveform" class="heading-waveform-image">
+    <img src="<?php //bloginfo('template_directory'); ?>/dist/images/waveform_white.png" alt="Waveform" class="heading-waveform-image">
     <iframe src="https://traktrain.com/widget/25495" width="100%" height="790" frameborder="0"></iframe>
-  </div>
+  </div> -->
 
   <div class="portfolio">
     <h2>Our Work</h2>
