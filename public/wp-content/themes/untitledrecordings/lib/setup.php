@@ -103,24 +103,48 @@ function get_related_portfolio_work($artist_id){
         'numberposts' => -1,
         'post_type'   => 'music',
       );
-  
+
     $all_music = get_posts( $args );
     // Loop through music posts
     $artist_portfolio_array = [];
 
     foreach ($all_music as $music_post){
-        // Get ACF assigned variable
+        // Get ACF producers assigning variable
         $post_id = $music_post->ID;
+
+        $lead_artists = get_field('lead-artists', $post_id);
+        $feat_artists = get_field('featured-artists', $post_id);
         $producers = get_field('producers', $post_id);
+        $engineers = get_field('engineers', $post_id);
         $ur_artists = get_field('ur_artists', $post_id);
-        
-        $result = array_merge($ur_artists, $producers);
-        //var_dump($result);
+
+        $pre_result = array();
+        if($lead_artists){
+            $pre_result = array_merge((array)$pre_result, $lead_artists); 
+        }
+        if($feat_artists){
+            $pre_result = array_merge((array)$pre_result, $feat_artists); 
+        }
+        if($producers){
+            $pre_result = array_merge((array)$pre_result, $producers); 
+        }        
+        if($engineers){
+            $pre_result = array_merge((array)$pre_result, $engineers); 
+        }
+        if($ur_artists){
+            $pre_result = array_merge((array)$pre_result, $ur_artists); 
+        }
+
+        $result = array_filter((array)$pre_result);
+        // echo '<pre>';
+        //     var_dump($result);
+        // echo '</pre>';
+
         $the_ids = [];
-   
+
         // Looping through all ACF producers field within music posts
-        foreach ($result as $producer){
-            $the_ids[] = $producer->ID;
+        foreach ($result as $artist){
+            $the_ids[] = $artist->ID;
         }
 
         // Check to see if current artist is included in music post
@@ -130,4 +154,4 @@ function get_related_portfolio_work($artist_id){
     }
     // Return values/posts
     return $artist_portfolio_array;
-}
+} 
