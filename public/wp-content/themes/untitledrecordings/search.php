@@ -47,7 +47,7 @@
             //var_dump($link);
             ?>  
         <a href="<?php echo $link ;?>">
-          <p class="search-result-type-tag"><?php echo $type->name; ?> by</p>
+          <p class="search-result-type-tag"><?php echo $type->name; ?></p>
         </a>
         <?php endforeach; ?>
         <?php endif; ?>
@@ -92,9 +92,9 @@
       </div>
       </div>
 
-      <?php if (get_field('producers')) : ?>
+      <?php if (get_field('ur_artists')) : ?>
         <div class="search-result-artist-group">
-          <?php foreach (get_field('producers') as $producer): ?> 
+          <?php foreach (get_field('ur_artists') as $producer): ?> 
             <?php //var_dump($producer); ?>
           <?php 
             $profile_image = get_field('profile_image', $producer->ID); 
