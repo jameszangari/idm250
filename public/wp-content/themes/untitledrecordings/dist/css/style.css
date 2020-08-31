@@ -221,6 +221,12 @@ h2 {
 }
 @media screen and (max-width : 600px) {
   h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+} 
+@media screen and (max-width : 320px) {
+  h2 {
     font-size: 34px;
     text-transform: uppercase;
   }
@@ -1111,7 +1117,6 @@ CAROUSEL STYLES
 }
 
 .artist-intro-content-left {
-  height: 400px;
   margin-top: 150px;
   margin-right: 3em;
   text-align: right;
@@ -1228,7 +1233,7 @@ CAROUSEL STYLES
   align-content: center;
   justify-content: center;
   background-color: var(--charcoal);
-  padding: 3em 3em 4em 3em;
+  padding: 3em;
 }
 .single-artists-about h2 {
   margin: auto;
@@ -1303,13 +1308,10 @@ CAROUSEL STYLES
 
 @media screen and (max-width : 768px) {
   .artist-title {
-    font-size: 64px;
+    font-size: 58px;
   }
   .artist-roles-title {
-    font-size: 36px;
-  }
-  .artist-intro-content {
-    margin-bottom: 0;
+    font-size: 30px;
   }
 }
 
@@ -1367,11 +1369,6 @@ CAROUSEL STYLES
 }
 
 /*------------------ MUSIC POST STYLES ------------------*/
-.music-posts-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .music-posts-content {
   padding: 3em;
   margin-top: 5em;
@@ -1383,6 +1380,7 @@ CAROUSEL STYLES
 
 .music-posts-content-right {
   margin-left: 4em;
+  width: 100%;
 }
 
 .music-posts-title {
@@ -1687,18 +1685,23 @@ CAROUSEL STYLES
     display: flex;
     flex-direction: column;
     width: auto;
+    column-gap: 0px;
+    row-gap: 0px;
+  }
+  .music-posts-stream a {
+    margin-top: 15px;
   }
 
   .music-posts-spotify, .music-posts-apple, .music-posts-amazon, 
   .music-posts-google-play, .music-posts-soundcloud, .music-posts-tidal,
   .music-posts-youtube {
-    width: 70vw;
+    width: 80vw;
   }
 }
 /* Desktops and laptops ----------- */
 @media screen and (max-width: 1024px) {
   .music-posts-content {
-    padding-top: 5em;
+    padding: 5em 2em 2em 2em;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -1740,6 +1743,11 @@ CAROUSEL STYLES
     display: grid;
     grid-template-columns: 100%;
     grid-row-gap: 6em;
+    padding: 0 2em 0 2em;
+  }
+  .music-posts-stream-group {
+    margin-top: -2em;
+    padding-bottom: 1.5em;
   }
   .music-posts-artists-group {
     display: flex;
@@ -1809,6 +1817,7 @@ CAROUSEL STYLES
   margin-left: 1rem;
   cursor: pointer;
   transition: all .3s;
+  -webkit-appearance: none;
 }
 
 .search-bar-submit:hover {
