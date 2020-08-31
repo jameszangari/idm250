@@ -2157,3 +2157,61 @@ a.next.page-numbers:hover, a.prev.page-numbers:hover {
   color: var(--darkgray);
   text-decoration: underline;
 }
+/*------------------ 
+PAGE STYLES 
+------------------*/
+.container-contact {
+  display: flex;
+  justify-content: center;
+  padding: 4em 0;
+}
+.post_title {
+  font-size: 50px;
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+.page-builder {
+  padding: 0 3em;
+}
+.page-builder p {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: normal;
+}
+.wpcf7-form p {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 1em;
+}
+.wpcf7-form-control-wrap input {
+  border: none;
+  border-radius: 12px;
+  padding: 1em;
+  width: 320px;
+  margin-top: 0.5em;
+}
+.wpcf7-textarea {
+  border: none;
+  border-radius: 12px;
+  padding: 1em;
+  width: 320px;
+  margin-top: 0.5em;
+  resize: none;
+}
+.wpcf7-submit {
+  width: 130px;
+  height: 40px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 18px;
+  background-color: #652D3E;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .3s;
+  -webkit-appearance: none;
+}
+.wpcf7-submit:hover {
+  background-color: #471f2b;
+}
