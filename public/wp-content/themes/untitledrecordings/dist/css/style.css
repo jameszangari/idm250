@@ -699,7 +699,38 @@ h2 {
     font-size: 28px !important;
   }
 }
-@media screen and (max-width : 375px) {
+@media screen and (max-width : 425px) {
+  .portfolio {
+    padding: 3em 2em 4em 2em;
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.5em;
+  }
+  .portfolio-grid-image img {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .portfolio-grid .portfolio-grid-hover {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .portfolio-grid :hover .portfolio-grid-hover{
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .portfolio-grid-hover {
+    transform: translate(0, -302px) !important;
+  }
+  .portfolio-grid-hover h3 {
+    font-size: 28px !important;
+  }
+}
+@media screen and (max-width : 370px) {
+  .portfolio {
+    padding: 3em 2em 4em 2em;
+  }
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -1192,7 +1223,7 @@ CAROUSEL STYLES
   align-content: center;
   justify-content: center;
   background-color: var(--charcoal);
-  padding: 3em;
+  padding: 3em 3em 4em 3em;
 }
 .single-artists-about h2 {
   margin: auto;
@@ -1204,7 +1235,7 @@ CAROUSEL STYLES
   color: var(--white);
   font-size: 20px;
   line-height: normal;
-  padding: 2em;
+  padding: 2em 0;
   margin: 0 8em;
 }
 
