@@ -29,6 +29,12 @@ function add_post_thumbnails_support() {
 }
 add_action('after_setup_theme', 'add_post_thumbnails_support');
 
+/*
+ * Enable support for Page excerpts.
+ * @link https://www.wpbeginner.com/plugins/add-excerpts-to-your-pages-in-wordpress/
+*/
+add_post_type_support( 'page', 'excerpt' );
+
 /**
  * Include any styles into the site the proper way
  *
