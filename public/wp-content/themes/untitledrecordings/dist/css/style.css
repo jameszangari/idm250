@@ -2167,16 +2167,65 @@ PAGE STYLES
 }
 .post_title {
   font-size: 50px;
-  padding-bottom: 1.5em;
+  padding-bottom: 1.25em;
   text-align: center;
+}
+.column p {
+  margin: 0 8em;
+  font-size: 20px;
+  line-height: normal;
+}
+/* iPads (portrait and landscape) ----------- */
+@media screen and (max-width : 475px) {
+  .column p {
+    margin: 0;
+    padding: 0 1em;
+  }
 }
 .page-builder {
   padding: 0 3em;
+  text-align: center;
 }
 .page-builder p {
   font-family: var(--font-body);
   font-size: 18px;
   line-height: normal;
+  padding: 0 16em 3em 16em;
+}
+.page-builder-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4em 0;
+}
+section h2 {
+  text-align: center;
+  padding-top: 2em;
+}
+.services-form {
+  margin: auto;
+}
+.sidebar-results-grid {
+  display: grid;
+  justify-items: center;
+  padding-top: 3em;
+}
+.sidebar-result {
+  display: flex;
+  flex-direction: row;
+}
+.sidebar-result img {
+  margin: 0 1em;
+}
+/* iPads (portrait and landscape) ----------- */
+@media screen and (max-width : 1024px) {
+  .sidebar-result {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar-result img {
+    margin: 1em 0;
+  }
 }
 .wpcf7-form p {
   font-family: var(--font-body);
@@ -2214,4 +2263,22 @@ PAGE STYLES
 }
 .wpcf7-submit:hover {
   background-color: #471f2b;
+}
+.service-options {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  padding-top: 1rem;
+  margin: auto;
+  justify-items: flex-start;
+}
+.checkbox-584 input {
+  width: 32px;
+}
+span.wpcf7-list-item {
+  text-align: left;
+  margin: 0;
+}
+.wpcf7-file {
+  font-size: 12px;
 }
