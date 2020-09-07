@@ -14,6 +14,7 @@
       $twitter = get_field('twitter', 'option');
       $discord = get_field('discord', 'option');
       $twitch = get_field('twitch', 'option');
+      $youtube = get_field('youtube', 'option');
       $headerlogo = get_field('logo-favicon', 'option');
       $headerlogo2 = get_field('logo-full', 'option');
   ?>
@@ -56,6 +57,9 @@
         <?php endif; ?>
         <?php if($twitch) : ?>
           <a href="<?php echo $twitch["url"]; ?>" target="<?php echo $twitch["target"]; ?>"><i class="fab fa-twitch"></i></a>
+        <?php endif; ?>
+        <?php if($youtube) : ?>
+          <a href="<?php echo $youtube["url"]; ?>" target="<?php echo $youtube["target"]; ?>"><i class="fab fa-youtube"></i></a>
         <?php endif; ?>
       </div>
     </div>
