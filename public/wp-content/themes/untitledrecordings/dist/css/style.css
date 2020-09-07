@@ -398,6 +398,10 @@ h2 {
   color: #6441a5;
 }
 
+.fa-youtube:hover{
+  color: #FF0000;
+}
+
 .menu-wrapper {
   display: none;
   position: absolute;
