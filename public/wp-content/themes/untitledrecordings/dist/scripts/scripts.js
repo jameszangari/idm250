@@ -1,12 +1,12 @@
+
 var $ = jQuery.noConflict();
 
+var $hamburger = $(".hamburger");
+$hamburger.on("click", function(e) {
+  $hamburger.toggleClass("is-active");
+  $(".menu-wrapper").toggle();
+});
 $(document).ready(function(){
-    $("button.header__hamburger").click(function(){
-      $(".menu-wrapper").toggle();
-      $("body").toggleClass("hidden");   
-    });
-
     $(".js-fillcolor").fillColor({type: 'avgYUV'});
     //console.log(fillColor());
-
 });

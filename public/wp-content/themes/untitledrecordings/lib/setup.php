@@ -43,6 +43,7 @@ add_post_type_support( 'page', 'excerpt' );
 function include_css_files() {
     // Example of including a style local to your theme root
     wp_enqueue_style('untitled-css', get_template_directory_uri() . '/dist/css/style.css');
+    wp_enqueue_style('hamburger-css', get_template_directory_uri() . '/dist/css/hamburgers.css');
     
     // Example of including an external link
     wp_enqueue_style('source-sans-pro', 'https://use.typekit.net/yae4mky.css');
@@ -62,7 +63,7 @@ add_action('wp_enqueue_scripts', 'include_css_files');
  */
 function include_js_files() {
     wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', [], null, true);
+	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', [], null, true);
     // Font Awesome icons
     wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/080c06f1d6.js');
     wp_enqueue_script('background-color', get_template_directory_uri() . '/dist/scripts/jquery.fillcolor.js', ['jquery'], null, true); 

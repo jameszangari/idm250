@@ -10,6 +10,7 @@
         <!-- Main Content -->
         <div class="column">
           <h1 class="post_title"><?php the_title(); ?></h1>
+          <h2><?php the_excerpt(); ?></h2>
           <?php the_excerpt(); ?>
           <?php the_post_thumbnail(); ?>
           <div class="page-builder">
