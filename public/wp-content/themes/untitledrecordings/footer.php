@@ -28,7 +28,7 @@
                 <a href="<?php echo $twitch["url"]; ?>" target="<?php echo $twitch["target"]; ?>"><i class="fab fa-twitch"></i></a>
             <?php endif; ?>
             <?php if($youtube) : ?>
-                <a href="<?php echo $youtube["url"]; ?>" target="<?php echo $youtube["target"]; ?>"><i class="fab fa-youtube"></i></a>
+                <a href="<?php echo $youtube["url"]; ?>" target="<?php echo $youtube["target"]; ?>"><i class="fab fa-youtube fa-youtube-menu"></i></a>
             <?php endif; ?>
         </div>
         <?php if($footerlogo) : ?>

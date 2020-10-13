@@ -178,7 +178,7 @@ body {
   margin: 0;
   padding: 0;
   background: var(--aliceblue);
-  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
 }
 
 .hidden {
@@ -398,7 +398,7 @@ h2 {
   color: #6441a5;
 }
 
-.fa-youtube:hover{
+.fa-youtube-menu:hover{
   color: #FF0000;
 }
 
@@ -603,7 +603,7 @@ h2 {
 .front-page-artist h4 {
   font-family: var(--font-body);
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--darkgray);
   padding: 0.25rem;
 }
@@ -627,7 +627,7 @@ h2 {
 }
 .front-page-artist-button p {
 	font-family: var(--font-body);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   letter-spacing: normal;
 	color: #F7F7FF;
@@ -848,7 +848,7 @@ h2 {
 }
 .portfolio-hover-button p {
 	font-family: var(--font-body);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   letter-spacing: normal;
 	color: #F7F7FF;
@@ -885,7 +885,7 @@ h2 {
 }
 .portfolio-button p {
 	font-family: var(--font-body);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   letter-spacing: normal;
 	color: #F7F7FF;
@@ -1162,7 +1162,7 @@ CAROUSEL STYLES
   color: var(--darkgray);
   font-family: var(--font-body);
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
   text-align: right;
   padding-top: 2em;
@@ -1417,7 +1417,7 @@ CAROUSEL STYLES
 
 .music-posts-tags-row .column-1 {
   font-family: var(--font-body);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .music-posts-tags-row .column-2 {
@@ -1932,7 +1932,7 @@ ARCHIVE PAGE STYLES
   text-align: center;
   font-family: var(--font-body);
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   height: 100vh;
 }
 
@@ -2047,7 +2047,7 @@ ARCHIVE PAGE STYLES
 .search-result-artist-title {
   color: var(--charcoal);
   font-family: var(--font-body);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   margin-right: 2em;
 }
@@ -2234,7 +2234,7 @@ section h2 {
 .wpcf7-form p {
   font-family: var(--font-body);
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   padding-bottom: 1em;
 }
 .wpcf7-form-control-wrap input {

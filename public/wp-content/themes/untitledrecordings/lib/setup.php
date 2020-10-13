@@ -46,8 +46,7 @@ function include_css_files() {
     wp_enqueue_style('hamburger-css', get_template_directory_uri() . '/dist/css/hamburgers.css');
     
     // Example of including an external link
-    wp_enqueue_style('source-sans-pro', 'https://use.typekit.net/yae4mky.css');
-
+    wp_enqueue_style('source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
     wp_enqueue_style('bebas-neue', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 }
 
